@@ -332,7 +332,7 @@ export default async function Home() {
               </a>
 
               <a
-                href="mailto:your-email-here"
+                href="mailto:caroline360@gmail.com"
                 className="secondary-button"
               >
                 Email
