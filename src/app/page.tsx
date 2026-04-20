@@ -1,18 +1,20 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#07070a] text-zinc-100">
-      <section className="relative overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(244,114,182,0.22),transparent_35%),radial-gradient(circle_at_top_left,rgba(59,130,246,0.18),transparent_30%)]" />
-        <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-28">
-          <p className="mb-5 text-sm font-medium uppercase tracking-[0.35em] text-pink-300">
-            Platform Operations · Microsoft 365 · Infrastructure
-          </p>
+    <main className="min-h-screen bg-[#17170f] text-[#f4efe3]">
+      {/* HERO */}
+      <section className="relative overflow-hidden border-b border-[#d6a85a]/20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(214,168,90,0.18),transparent_32%),radial-gradient(circle_at_85%_5%,rgba(194,91,36,0.14),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.04),transparent_45%)]" />
 
-          <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-white md:text-6xl">
+        <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-28">
+          <div className="mb-6 inline-flex rounded-full border border-[#d6a85a]/30 bg-[#242417]/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#d6a85a]">
+            Platform Operations · Microsoft 365 · Infrastructure
+          </div>
+
+          <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-[#fff8e8] md:text-6xl">
             Microsoft 365, infrastructure, and support work that holds up in production.
           </h1>
 
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-300">
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-[#d9d0bd]">
             I work across Microsoft 365, SharePoint, endpoint support, identity,
             automation, networking, and hybrid infrastructure to make production
             environments easier to govern, secure, and support.
@@ -21,32 +23,42 @@ export default function Home() {
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="#work"
-              className="rounded-full bg-pink-400 px-5 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-pink-300"
+              className="rounded-full bg-[#d6a85a] px-5 py-3 text-sm font-semibold text-[#17170f] transition hover:bg-[#e6bd73]"
             >
               View Work
             </a>
             <a
               href="https://github.com/figgy-ops"
-              className="rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              className="rounded-full border border-[#d6a85a]/30 px-5 py-3 text-sm font-semibold text-[#fff8e8] transition hover:bg-[#d6a85a]/10"
             >
               GitHub
             </a>
             <a
               href="#contact"
-              className="rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              className="rounded-full border border-[#c25b24]/35 px-5 py-3 text-sm font-semibold text-[#fff8e8] transition hover:bg-[#c25b24]/10"
             >
               Contact
             </a>
           </div>
 
           <div className="mt-14 grid gap-4 sm:grid-cols-3">
-            <Metric value="40+" label="Sites supported across hybrid infrastructure and Microsoft 365" />
-            <Metric value="300+" label="User accounts covered by MFA, Conditional Access, and device policy" />
-            <Metric value="900+" label="Support and infrastructure tickets handled in 12 months" />
+            <Metric
+              value="40+"
+              label="Sites supported across hybrid infrastructure and Microsoft 365"
+            />
+            <Metric
+              value="300+"
+              label="User accounts covered by MFA, Conditional Access, and device policy"
+            />
+            <Metric
+              value="900+"
+              label="Support and infrastructure tickets handled in 12 months"
+            />
           </div>
         </div>
       </section>
 
+      {/* SELECTED WORK */}
       <section id="work" className="mx-auto max-w-6xl px-6 py-20">
         <SectionHeader
           eyebrow="Selected Work"
@@ -78,7 +90,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.03]">
+      {/* CERTIFICATIONS */}
+      <section
+        id="certifications"
+        className="border-y border-[#d6a85a]/20 bg-[#202013]"
+      >
         <div className="mx-auto max-w-6xl px-6 py-20">
           <SectionHeader
             eyebrow="Certifications"
@@ -86,58 +102,64 @@ export default function Home() {
             body="I’m building formal credentials around the same areas I work in day to day: network security, systems administration, endpoint support, and platform operations."
           />
 
-          <div className="mt-10 grid gap-5 lg:grid-cols-[1.4fr_0.9fr]">
-            <article className="rounded-3xl border border-pink-300/25 bg-pink-300/[0.06] p-6 shadow-2xl shadow-pink-950/20">
-              <div className="grid gap-6 md:grid-cols-[1fr_220px]">
+          <div className="mt-10 grid gap-5 lg:grid-cols-[1.35fr_0.9fr]">
+            <article className="rounded-3xl border border-[#d6a85a]/30 bg-[#17170f]/80 p-6 shadow-2xl shadow-black/20">
+              <div className="grid gap-6 md:grid-cols-[1fr_230px]">
                 <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.25em] text-pink-300">
+                  <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#d6a85a]">
                     Fortinet · Network Security
                   </p>
-                  <h3 className="mt-3 text-2xl font-semibold text-white">
+                  <h3 className="mt-3 text-2xl font-semibold text-[#fff8e8]">
                     Fortinet Network Security Expert Level 3: Certified Associate
                   </h3>
-                  <p className="mt-4 leading-7 text-zinc-300">
+                  <p className="mt-4 leading-7 text-[#d9d0bd]">
                     Supports hands-on infrastructure work involving firewalls,
                     network security, segmentation, and production support across
                     distributed environments.
                   </p>
 
-                  <ul className="mt-5 space-y-2 text-sm text-zinc-300">
+                  <ul className="mt-5 space-y-2 text-sm text-[#d9d0bd]">
                     <li>
-                      <span className="text-zinc-500">Issued:</span> October 2025
+                      <span className="text-[#9f967f]">Issued:</span> October 2025
                     </li>
                     <li>
-                      <span className="text-zinc-500">Expires:</span> October 2027
+                      <span className="text-[#9f967f]">Expires:</span> October 2027
                     </li>
                     <li>
-                      <span className="text-zinc-500">Credential ID:</span> 5036577450CM
+                      <span className="text-[#9f967f]">Credential ID:</span>{" "}
+                      5036577450CM
                     </li>
                   </ul>
                 </div>
 
-                <div className="flex min-h-[220px] items-center justify-center rounded-2xl border border-dashed border-pink-200/35 bg-black/25 p-4 text-center text-sm text-zinc-400">
+                <div className="flex min-h-[220px] items-center justify-center rounded-2xl border border-dashed border-[#d6a85a]/40 bg-[#242417] p-4 text-center text-sm text-[#b9ae99]">
                   <div>
-                    <p className="font-medium text-zinc-200">Certificate image</p>
-                    <p className="mt-2">Placeholder for Fortinet cert image</p>
+                    <p className="font-medium text-[#fff8e8]">
+                      Certificate image
+                    </p>
+                    <p className="mt-2">
+                      Placeholder for Fortinet cert image
+                    </p>
                   </div>
                 </div>
               </div>
             </article>
 
-            <article className="rounded-3xl border border-white/10 bg-zinc-950/70 p-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">
+            <article className="rounded-3xl border border-[#d6a85a]/20 bg-[#17170f]/80 p-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#c25b24]">
                 Microsoft · Systems Administration
               </p>
-              <h3 className="mt-3 text-xl font-semibold text-white">
+              <h3 className="mt-3 text-xl font-semibold text-[#fff8e8]">
                 Career Essentials in System Administration
               </h3>
-              <p className="mt-4 leading-7 text-zinc-300">
+              <p className="mt-4 leading-7 text-[#d9d0bd]">
                 Reinforces core systems administration concepts across identity,
-                endpoint support, Windows-based environments, and operational IT work.
+                endpoint support, Windows-based environments, and operational IT
+                work.
               </p>
-              <ul className="mt-5 space-y-2 text-sm text-zinc-300">
+              <ul className="mt-5 space-y-2 text-sm text-[#d9d0bd]">
                 <li>
-                  <span className="text-zinc-500">Issued:</span> January 2025
+                  <span className="text-[#9f967f]">Issued:</span> January 2025
                 </li>
               </ul>
             </article>
@@ -145,6 +167,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* EXPERIENCE */}
       <section id="experience" className="mx-auto max-w-6xl px-6 py-20">
         <SectionHeader
           eyebrow="Experience"
@@ -174,14 +197,15 @@ export default function Home() {
             body="Provided IT support in a professional services environment with exposure to Microsoft cloud services, user support, device troubleshooting, and operational technology needs."
             bullets={[
               "Supported users, devices, Microsoft services, and day-to-day IT operations.",
-              "Handled practical troubleshooting across accounts, applications, endpoints, and support requests.",
+              "Handled troubleshooting across accounts, applications, endpoints, and support requests.",
               "Built a foundation in service delivery, documentation, and issue ownership before moving into broader platform and infrastructure work."
             ]}
           />
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.03]">
+      {/* BACKGROUND */}
+      <section className="border-y border-[#d6a85a]/20 bg-[#202013]">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <SectionHeader
             eyebrow="Background"
@@ -206,6 +230,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* GITHUB */}
       <section id="github" className="mx-auto max-w-6xl px-6 py-20">
         <SectionHeader
           eyebrow="GitHub"
@@ -216,11 +241,15 @@ export default function Home() {
         <div className="mt-10 grid gap-5 md:grid-cols-2">
           <a
             href="https://github.com/figgy-ops/figgy-pro"
-            className="rounded-3xl border border-white/10 bg-zinc-950/70 p-6 transition hover:border-pink-300/40 hover:bg-white/[0.05]"
+            className="rounded-3xl border border-[#d6a85a]/20 bg-[#202013] p-6 transition hover:border-[#d6a85a]/50 hover:bg-[#252517]"
           >
-            <p className="text-sm font-semibold text-pink-300">TypeScript · Apr 2026</p>
-            <h3 className="mt-3 text-xl font-semibold text-white">Figgy Pro</h3>
-            <p className="mt-3 leading-7 text-zinc-300">
+            <p className="text-sm font-semibold text-[#d6a85a]">
+              TypeScript · Apr 2026
+            </p>
+            <h3 className="mt-3 text-xl font-semibold text-[#fff8e8]">
+              Figgy Pro
+            </h3>
+            <p className="mt-3 leading-7 text-[#d9d0bd]">
               Portfolio site work and frontend experimentation for professional
               positioning, project display, and custom embeds.
             </p>
@@ -228,51 +257,60 @@ export default function Home() {
 
           <a
             href="https://github.com/figgy-ops/spfx-command-center"
-            className="rounded-3xl border border-white/10 bg-zinc-950/70 p-6 transition hover:border-pink-300/40 hover:bg-white/[0.05]"
+            className="rounded-3xl border border-[#d6a85a]/20 bg-[#202013] p-6 transition hover:border-[#d6a85a]/50 hover:bg-[#252517]"
           >
-            <p className="text-sm font-semibold text-pink-300">TypeScript · Apr 2026</p>
-            <h3 className="mt-3 text-xl font-semibold text-white">SPFx Command Center</h3>
-            <p className="mt-3 leading-7 text-zinc-300">
-              SharePoint Framework project work focused on practical admin visibility,
-              site support, and Microsoft 365 operational tooling.
+            <p className="text-sm font-semibold text-[#d6a85a]">
+              TypeScript · Apr 2026
+            </p>
+            <h3 className="mt-3 text-xl font-semibold text-[#fff8e8]">
+              SPFx Command Center
+            </h3>
+            <p className="mt-3 leading-7 text-[#d9d0bd]">
+              SharePoint Framework project work focused on practical admin
+              visibility, site support, and Microsoft 365 operational tooling.
             </p>
           </a>
         </div>
       </section>
 
+      {/* CONTACT */}
       <section id="contact" className="mx-auto max-w-6xl px-6 py-20">
-        <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-pink-300/[0.10] to-blue-300/[0.08] p-8 md:p-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-pink-300">
-            Contact
-          </p>
-          <h2 className="mt-4 max-w-3xl text-3xl font-semibold tracking-tight text-white md:text-5xl">
-            Open to remote platform, Microsoft 365, and infrastructure roles.
-          </h2>
-          <p className="mt-5 max-w-3xl leading-8 text-zinc-300">
-            I’m targeting remote roles where I can keep growing in platform
-            operations, Microsoft 365 administration, SharePoint governance,
-            automation, endpoint management, and infrastructure support.
-          </p>
+        <div className="relative overflow-hidden rounded-3xl border border-[#d6a85a]/25 bg-[#202013] p-8 md:p-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_15%,rgba(194,91,36,0.16),transparent_30%),radial-gradient(circle_at_10%_80%,rgba(214,168,90,0.14),transparent_34%)]" />
 
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="mailto:caroline360@gmail.com"
-              className="rounded-full bg-pink-400 px-5 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-pink-300"
-            >
-              Email Me
-            </a>
-            <a
-              href="https://github.com/figgy-ops"
-              className="rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://www.linkedin.com/in/caroline-mclallen/"
-              className="rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-            >
-              LinkedIn
-            </a>
+          <div className="relative">
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#d6a85a]">
+              Contact
+            </p>
+            <h2 className="mt-4 max-w-3xl text-3xl font-semibold tracking-tight text-[#fff8e8] md:text-5xl">
+              Open to remote platform, Microsoft 365, and infrastructure roles.
+            </h2>
+            <p className="mt-5 max-w-3xl leading-8 text-[#d9d0bd]">
+              I’m targeting remote roles where I can keep growing in platform
+              operations, Microsoft 365 administration, SharePoint governance,
+              automation, endpoint management, and infrastructure support.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="mailto:caroline360@gmail.com"
+                className="rounded-full bg-[#d6a85a] px-5 py-3 text-sm font-semibold text-[#17170f] transition hover:bg-[#e6bd73]"
+              >
+                Email Me
+              </a>
+              <a
+                href="https://github.com/figgy-ops"
+                className="rounded-full border border-[#d6a85a]/30 px-5 py-3 text-sm font-semibold text-[#fff8e8] transition hover:bg-[#d6a85a]/10"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/caroline-mclallen/"
+                className="rounded-full border border-[#c25b24]/35 px-5 py-3 text-sm font-semibold text-[#fff8e8] transition hover:bg-[#c25b24]/10"
+              >
+                LinkedIn
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -282,9 +320,9 @@ export default function Home() {
 
 function Metric({ value, label }: { value: string; label: string }) {
   return (
-    <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6">
-      <p className="text-4xl font-semibold text-white">{value}</p>
-      <p className="mt-3 text-sm leading-6 text-zinc-400">{label}</p>
+    <div className="rounded-3xl border border-[#d6a85a]/20 bg-[#202013]/85 p-6 shadow-lg shadow-black/15">
+      <p className="text-4xl font-semibold text-[#fff8e8]">{value}</p>
+      <p className="mt-3 text-sm leading-6 text-[#b9ae99]">{label}</p>
     </div>
   );
 }
@@ -300,13 +338,13 @@ function SectionHeader({
 }) {
   return (
     <div className="max-w-3xl">
-      <p className="text-sm font-semibold uppercase tracking-[0.35em] text-pink-300">
+      <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#d6a85a]">
         {eyebrow}
       </p>
-      <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">
+      <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[#fff8e8] md:text-5xl">
         {title}
       </h2>
-      <p className="mt-5 leading-8 text-zinc-300">{body}</p>
+      <p className="mt-5 leading-8 text-[#d9d0bd]">{body}</p>
     </div>
   );
 }
@@ -321,10 +359,10 @@ function WorkCard({
   body: string;
 }) {
   return (
-    <article className="rounded-3xl border border-white/10 bg-zinc-950/70 p-6">
-      <p className="text-sm font-semibold text-pink-300">{tag}</p>
-      <h3 className="mt-3 text-xl font-semibold text-white">{title}</h3>
-      <p className="mt-3 leading-7 text-zinc-300">{body}</p>
+    <article className="rounded-3xl border border-[#d6a85a]/20 bg-[#202013] p-6 shadow-lg shadow-black/10 transition hover:border-[#d6a85a]/45 hover:bg-[#252517]">
+      <p className="text-sm font-semibold text-[#d6a85a]">{tag}</p>
+      <h3 className="mt-3 text-xl font-semibold text-[#fff8e8]">{title}</h3>
+      <p className="mt-3 leading-7 text-[#d9d0bd]">{body}</p>
     </article>
   );
 }
@@ -343,21 +381,21 @@ function ExperienceCard({
   bullets: string[];
 }) {
   return (
-    <article className="rounded-3xl border border-white/10 bg-zinc-950/70 p-6">
+    <article className="rounded-3xl border border-[#d6a85a]/20 bg-[#202013] p-6 shadow-lg shadow-black/10">
       <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
         <div>
-          <h3 className="text-xl font-semibold text-white">{title}</h3>
-          <p className="mt-1 text-zinc-400">{company}</p>
+          <h3 className="text-xl font-semibold text-[#fff8e8]">{title}</h3>
+          <p className="mt-1 text-[#b9ae99]">{company}</p>
         </div>
-        <p className="text-sm text-zinc-500">{dates}</p>
+        <p className="text-sm text-[#9f967f]">{dates}</p>
       </div>
 
-      <p className="mt-5 leading-7 text-zinc-300">{body}</p>
+      <p className="mt-5 leading-7 text-[#d9d0bd]">{body}</p>
 
-      <ul className="mt-5 space-y-3 text-sm leading-6 text-zinc-300">
+      <ul className="mt-5 space-y-3 text-sm leading-6 text-[#d9d0bd]">
         {bullets.map((bullet) => (
           <li key={bullet} className="flex gap-3">
-            <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-pink-300" />
+            <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-[#c25b24]" />
             <span>{bullet}</span>
           </li>
         ))}
@@ -368,9 +406,9 @@ function ExperienceCard({
 
 function FocusCard({ title, body }: { title: string; body: string }) {
   return (
-    <article className="rounded-3xl border border-white/10 bg-zinc-950/70 p-6">
-      <h3 className="text-xl font-semibold text-white">{title}</h3>
-      <p className="mt-3 leading-7 text-zinc-300">{body}</p>
+    <article className="rounded-3xl border border-[#d6a85a]/20 bg-[#17170f]/80 p-6 shadow-lg shadow-black/10">
+      <h3 className="text-xl font-semibold text-[#fff8e8]">{title}</h3>
+      <p className="mt-3 leading-7 text-[#d9d0bd]">{body}</p>
     </article>
   );
 }
