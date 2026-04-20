@@ -3,7 +3,8 @@ export default function Home() {
     <main className="min-h-screen bg-[#17170f] text-[#f4efe3]">
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-[#d6a85a]/20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(214,168,90,0.18),transparent_32%),radial-gradient(circle_at_85%_5%,rgba(194,91,36,0.14),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.04),transparent_45%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_0%,rgba(214,168,90,0.16),transparent_34%),linear-gradient(180deg,rgba(255,248,232,0.045),transparent_52%)]" />
+        <div className="absolute left-0 top-0 h-full w-1 bg-[#b9652d]" />
 
         <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-28">
           <div className="mb-6 inline-flex rounded-full border border-[#d6a85a]/30 bg-[#242417]/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#d6a85a]">
@@ -11,13 +12,13 @@ export default function Home() {
           </div>
 
           <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-[#fff8e8] md:text-6xl">
-            Microsoft 365, infrastructure, and support work that holds up in production.
+            Microsoft 365 and infrastructure work built for real production environments.
           </h1>
 
           <p className="mt-6 max-w-3xl text-lg leading-8 text-[#d9d0bd]">
-            I work across Microsoft 365, SharePoint, endpoint support, identity,
+            I work across Microsoft 365, SharePoint, endpoint management, identity,
             automation, networking, and hybrid infrastructure to make production
-            environments easier to govern, secure, and support.
+            environments easier to govern, secure, and operate.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -35,7 +36,7 @@ export default function Home() {
             </a>
             <a
               href="#contact"
-              className="rounded-full border border-[#c25b24]/35 px-5 py-3 text-sm font-semibold text-[#fff8e8] transition hover:bg-[#c25b24]/10"
+              className="rounded-full border border-[#b9652d]/45 px-5 py-3 text-sm font-semibold text-[#fff8e8] transition hover:border-[#d6a85a]/45 hover:bg-[#d6a85a]/10"
             >
               Contact
             </a>
@@ -44,7 +45,7 @@ export default function Home() {
           <div className="mt-14 grid gap-4 sm:grid-cols-3">
             <Metric
               value="40+"
-              label="Sites supported across hybrid infrastructure and Microsoft 365"
+              label="Sites across hybrid infrastructure and Microsoft 365"
             />
             <Metric
               value="300+"
@@ -52,7 +53,7 @@ export default function Home() {
             />
             <Metric
               value="900+"
-              label="Support and infrastructure tickets handled in 12 months"
+              label="Operational and infrastructure tickets handled in 12 months"
             />
           </div>
         </div>
@@ -62,8 +63,8 @@ export default function Home() {
       <section id="work" className="mx-auto max-w-6xl px-6 py-20">
         <SectionHeader
           eyebrow="Selected Work"
-          title="Work shaped by real operational constraints."
-          body="My strongest work sits where Microsoft 365 administration, SharePoint governance, automation, identity, endpoint support, and infrastructure overlap. I do best in environments that need practical fixes, cleaner structure, and follow-through."
+          title="Operational work with governance, automation, and infrastructure impact."
+          body="My strongest work sits where Microsoft 365 administration, SharePoint governance, automation, identity, endpoint management, and infrastructure overlap. I do best in environments that need practical fixes, cleaner structure, and follow-through."
         />
 
         <div className="mt-10 grid gap-5 md:grid-cols-2">
@@ -73,14 +74,14 @@ export default function Home() {
             body="Audited SharePoint and OneDrive exposure, reviewed external sharing patterns, and built repeatable reporting with PowerShell and PnP to make governance work easier to maintain."
           />
           <WorkCard
-            tag="Entra ID · Intune · Endpoint Controls"
+            tag="Entra ID · Intune · Endpoint Management"
             title="Identity & Endpoint Controls"
-            body="Supported MFA, Conditional Access, device compliance, endpoint enrollment, and account governance across a multi-site Microsoft 365 environment."
+            body="Worked across MFA, Conditional Access, device compliance, endpoint enrollment, and account governance in a multi-site Microsoft 365 environment."
           />
           <WorkCard
-            tag="Infrastructure · Networking · Site Support"
-            title="Distributed Infrastructure Support"
-            body="Supported switching, ISP transition work, segmentation planning, and network stability improvements across dozens of live production sites."
+            tag="Infrastructure · Networking · Site Connectivity"
+            title="Distributed Infrastructure Operations"
+            body="Worked on switching, ISP transition work, segmentation planning, and network stability improvements across dozens of live production sites."
           />
           <WorkCard
             tag="SharePoint · Information Architecture"
@@ -98,13 +99,15 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6 py-20">
           <SectionHeader
             eyebrow="Certifications"
-            title="Training aligned with infrastructure, security, and systems work."
-            body="I’m building formal credentials around the same areas I work in day to day: network security, systems administration, endpoint support, and platform operations."
+            title="Credentials aligned with network security and systems administration."
+            body="I’m building formal credentials around the same areas I work in day to day: network security, systems administration, endpoint management, infrastructure, and platform operations."
           />
 
           <div className="mt-10 grid gap-5 lg:grid-cols-[1.35fr_0.9fr]">
-            <article className="rounded-3xl border border-[#d6a85a]/30 bg-[#17170f]/80 p-6 shadow-2xl shadow-black/20">
-              <div className="grid gap-6 md:grid-cols-[1fr_230px]">
+            <article className="relative overflow-hidden rounded-3xl border border-[#d6a85a]/30 bg-[#17170f]/85 p-6 shadow-2xl shadow-black/20">
+              <div className="absolute left-0 top-0 h-full w-1 bg-[#b9652d]" />
+
+              <div className="grid gap-6 pl-2 md:grid-cols-[1fr_230px]">
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#d6a85a]">
                     Fortinet · Network Security
@@ -114,7 +117,7 @@ export default function Home() {
                   </h3>
                   <p className="mt-4 leading-7 text-[#d9d0bd]">
                     Supports hands-on infrastructure work involving firewalls,
-                    network security, segmentation, and production support across
+                    network security, segmentation, and production operations across
                     distributed environments.
                   </p>
 
@@ -145,8 +148,8 @@ export default function Home() {
               </div>
             </article>
 
-            <article className="rounded-3xl border border-[#d6a85a]/20 bg-[#17170f]/80 p-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#c25b24]">
+            <article className="rounded-3xl border border-[#d6a85a]/20 bg-[#17170f]/85 p-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#b9652d]">
                 Microsoft · Systems Administration
               </p>
               <h3 className="mt-3 text-xl font-semibold text-[#fff8e8]">
@@ -154,7 +157,7 @@ export default function Home() {
               </h3>
               <p className="mt-4 leading-7 text-[#d9d0bd]">
                 Reinforces core systems administration concepts across identity,
-                endpoint support, Windows-based environments, and operational IT
+                endpoint management, Windows-based environments, and operational IT
                 work.
               </p>
               <ul className="mt-5 space-y-2 text-sm text-[#d9d0bd]">
@@ -171,8 +174,8 @@ export default function Home() {
       <section id="experience" className="mx-auto max-w-6xl px-6 py-20">
         <SectionHeader
           eyebrow="Experience"
-          title="Broad enough to support, technical enough to improve."
-          body="My work includes Microsoft 365 administration, SharePoint structure and governance, PowerShell automation, identity controls, endpoint compliance, and hybrid infrastructure support. I’m strongest where operations and engineering start to overlap."
+          title="Platform operations across systems, identity, and infrastructure."
+          body="My work includes Microsoft 365 administration, SharePoint structure and governance, PowerShell automation, identity controls, endpoint compliance, and hybrid infrastructure administration. I’m strongest where operations, governance, and engineering start to overlap."
         />
 
         <div className="mt-10 space-y-5">
@@ -180,13 +183,13 @@ export default function Home() {
             title="Information Technology Specialist"
             company="Texas Historical Commission"
             dates="January 2024 to present"
-            body="Support Microsoft 365, SharePoint, endpoint operations, account governance, and infrastructure work across a distributed public-sector environment."
+            body="Work across Microsoft 365, SharePoint, endpoint operations, account governance, and infrastructure administration in a distributed public-sector environment."
             bullets={[
               "Administer Microsoft 365 services including SharePoint, Teams, Exchange, OneDrive, and Entra ID.",
               "Use PowerShell and PnP for reporting, governance cleanup, and administrative automation.",
-              "Support identity and endpoint controls including MFA, Conditional Access, Intune, and compliance policy work.",
-              "Assist with hybrid infrastructure support involving Windows Server, Active Directory, DNS, DHCP, switching, and site connectivity.",
-              "Contribute to accessibility and compliance work involving Section 508, WCAG, remediation tracking, and documentation."
+              "Work with identity and endpoint controls including MFA, Conditional Access, Intune, and compliance policy configuration.",
+              "Contribute to hybrid infrastructure administration involving Windows Server, Active Directory, DNS, DHCP, switching, and site connectivity.",
+              "Participate in accessibility and compliance work involving Section 508, WCAG, remediation tracking, and documentation."
             ]}
           />
 
@@ -194,23 +197,23 @@ export default function Home() {
             title="IT Specialist"
             company="Private Law Firm"
             dates="January 2022 to August 2024"
-            body="Provided IT support in a professional services environment with exposure to Microsoft cloud services, user support, device troubleshooting, and operational technology needs."
+            body="Worked in a professional services environment with exposure to Microsoft cloud services, endpoint troubleshooting, account administration, and operational technology needs."
             bullets={[
-              "Supported users, devices, Microsoft services, and day-to-day IT operations.",
-              "Handled troubleshooting across accounts, applications, endpoints, and support requests.",
+              "Worked across users, devices, Microsoft services, and day-to-day technology operations.",
+              "Handled troubleshooting across accounts, applications, endpoints, and operational requests.",
               "Built a foundation in service delivery, documentation, and issue ownership before moving into broader platform and infrastructure work."
             ]}
           />
         </div>
       </section>
 
-      {/* BACKGROUND */}
+      {/* CAPABILITIES */}
       <section className="border-y border-[#d6a85a]/20 bg-[#202013]">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <SectionHeader
-            eyebrow="Background"
-            title="Support background, infrastructure direction."
-            body="Before moving deeper into IT, I built a foundation in high-volume support, customer service, documentation, and team leadership. That background still shows up in how I troubleshoot, communicate, and keep messy operational work moving."
+            eyebrow="Capabilities"
+            title="Practical technical range without losing the operational thread."
+            body="I’m interested in roles that combine systems administration, Microsoft 365 platform work, governance, automation, infrastructure, and endpoint management."
           />
 
           <div className="mt-10 grid gap-5 md:grid-cols-3">
@@ -219,7 +222,7 @@ export default function Home() {
               body="Microsoft 365, SharePoint, Entra ID, endpoint compliance, and user-facing systems that need steady administration."
             />
             <FocusCard
-              title="Infrastructure Support"
+              title="Infrastructure Administration"
               body="Switching, site connectivity, Windows Server, Active Directory, DNS, DHCP, and production troubleshooting."
             />
             <FocusCard
@@ -241,7 +244,7 @@ export default function Home() {
         <div className="mt-10 grid gap-5 md:grid-cols-2">
           <a
             href="https://github.com/figgy-ops/figgy-pro"
-            className="rounded-3xl border border-[#d6a85a]/20 bg-[#202013] p-6 transition hover:border-[#d6a85a]/50 hover:bg-[#252517]"
+            className="group rounded-3xl border border-[#d6a85a]/20 bg-[#202013] p-6 transition hover:border-[#d6a85a]/50 hover:bg-[#252517]"
           >
             <p className="text-sm font-semibold text-[#d6a85a]">
               TypeScript · Apr 2026
@@ -253,11 +256,12 @@ export default function Home() {
               Portfolio site work and frontend experimentation for professional
               positioning, project display, and custom embeds.
             </p>
+            <div className="mt-5 h-px w-16 bg-[#b9652d] transition group-hover:w-24" />
           </a>
 
           <a
             href="https://github.com/figgy-ops/spfx-command-center"
-            className="rounded-3xl border border-[#d6a85a]/20 bg-[#202013] p-6 transition hover:border-[#d6a85a]/50 hover:bg-[#252517]"
+            className="group rounded-3xl border border-[#d6a85a]/20 bg-[#202013] p-6 transition hover:border-[#d6a85a]/50 hover:bg-[#252517]"
           >
             <p className="text-sm font-semibold text-[#d6a85a]">
               TypeScript · Apr 2026
@@ -267,8 +271,9 @@ export default function Home() {
             </h3>
             <p className="mt-3 leading-7 text-[#d9d0bd]">
               SharePoint Framework project work focused on practical admin
-              visibility, site support, and Microsoft 365 operational tooling.
+              visibility, site administration, and Microsoft 365 operational tooling.
             </p>
+            <div className="mt-5 h-px w-16 bg-[#b9652d] transition group-hover:w-24" />
           </a>
         </div>
       </section>
@@ -276,9 +281,10 @@ export default function Home() {
       {/* CONTACT */}
       <section id="contact" className="mx-auto max-w-6xl px-6 py-20">
         <div className="relative overflow-hidden rounded-3xl border border-[#d6a85a]/25 bg-[#202013] p-8 md:p-10">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_15%,rgba(194,91,36,0.16),transparent_30%),radial-gradient(circle_at_10%_80%,rgba(214,168,90,0.14),transparent_34%)]" />
+          <div className="absolute left-0 top-0 h-full w-1 bg-[#b9652d]" />
+          <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-[#d6a85a]/45 to-transparent" />
 
-          <div className="relative">
+          <div className="relative pl-2">
             <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#d6a85a]">
               Contact
             </p>
@@ -288,7 +294,7 @@ export default function Home() {
             <p className="mt-5 max-w-3xl leading-8 text-[#d9d0bd]">
               I’m targeting remote roles where I can keep growing in platform
               operations, Microsoft 365 administration, SharePoint governance,
-              automation, endpoint management, and infrastructure support.
+              automation, endpoint management, and infrastructure administration.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -306,7 +312,7 @@ export default function Home() {
               </a>
               <a
                 href="https://www.linkedin.com/in/caroline-mclallen/"
-                className="rounded-full border border-[#c25b24]/35 px-5 py-3 text-sm font-semibold text-[#fff8e8] transition hover:bg-[#c25b24]/10"
+                className="rounded-full border border-[#b9652d]/45 px-5 py-3 text-sm font-semibold text-[#fff8e8] transition hover:border-[#d6a85a]/45 hover:bg-[#d6a85a]/10"
               >
                 LinkedIn
               </a>
@@ -320,9 +326,10 @@ export default function Home() {
 
 function Metric({ value, label }: { value: string; label: string }) {
   return (
-    <div className="rounded-3xl border border-[#d6a85a]/20 bg-[#202013]/85 p-6 shadow-lg shadow-black/15">
-      <p className="text-4xl font-semibold text-[#fff8e8]">{value}</p>
-      <p className="mt-3 text-sm leading-6 text-[#b9ae99]">{label}</p>
+    <div className="relative overflow-hidden rounded-3xl border border-[#d6a85a]/20 bg-[#202013]/85 p-6 shadow-lg shadow-black/15">
+      <div className="absolute left-0 top-0 h-full w-1 bg-[#b9652d]/80" />
+      <p className="pl-2 text-4xl font-semibold text-[#fff8e8]">{value}</p>
+      <p className="mt-3 pl-2 text-sm leading-6 text-[#b9ae99]">{label}</p>
     </div>
   );
 }
@@ -359,10 +366,11 @@ function WorkCard({
   body: string;
 }) {
   return (
-    <article className="rounded-3xl border border-[#d6a85a]/20 bg-[#202013] p-6 shadow-lg shadow-black/10 transition hover:border-[#d6a85a]/45 hover:bg-[#252517]">
+    <article className="group rounded-3xl border border-[#d6a85a]/20 bg-[#202013] p-6 shadow-lg shadow-black/10 transition hover:border-[#d6a85a]/45 hover:bg-[#252517]">
       <p className="text-sm font-semibold text-[#d6a85a]">{tag}</p>
       <h3 className="mt-3 text-xl font-semibold text-[#fff8e8]">{title}</h3>
       <p className="mt-3 leading-7 text-[#d9d0bd]">{body}</p>
+      <div className="mt-5 h-px w-12 bg-[#b9652d] transition group-hover:w-20" />
     </article>
   );
 }
@@ -382,7 +390,7 @@ function ExperienceCard({
 }) {
   return (
     <article className="rounded-3xl border border-[#d6a85a]/20 bg-[#202013] p-6 shadow-lg shadow-black/10">
-      <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
+      <div className="flex flex-col gap-2 border-b border-[#d6a85a]/15 pb-5 md:flex-row md:items-start md:justify-between">
         <div>
           <h3 className="text-xl font-semibold text-[#fff8e8]">{title}</h3>
           <p className="mt-1 text-[#b9ae99]">{company}</p>
@@ -395,7 +403,7 @@ function ExperienceCard({
       <ul className="mt-5 space-y-3 text-sm leading-6 text-[#d9d0bd]">
         {bullets.map((bullet) => (
           <li key={bullet} className="flex gap-3">
-            <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-[#c25b24]" />
+            <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-[#b9652d]" />
             <span>{bullet}</span>
           </li>
         ))}
@@ -407,6 +415,7 @@ function ExperienceCard({
 function FocusCard({ title, body }: { title: string; body: string }) {
   return (
     <article className="rounded-3xl border border-[#d6a85a]/20 bg-[#17170f]/80 p-6 shadow-lg shadow-black/10">
+      <div className="mb-4 h-px w-14 bg-[#b9652d]" />
       <h3 className="text-xl font-semibold text-[#fff8e8]">{title}</h3>
       <p className="mt-3 leading-7 text-[#d9d0bd]">{body}</p>
     </article>
