@@ -122,7 +122,7 @@ export default async function Home() {
             </div>
 
             <h1 className="mt-8 text-[clamp(3.4rem,8vw,6.8rem)] font-semibold leading-[0.92] tracking-[-0.055em]">
-              Practical systems engineering across Microsoft 365, SharePoint, and infrastructure.
+              Microsoft 365 and infrastructure systems.
             </h1>
 
             <p className="mt-8 max-w-[720px] text-lg leading-8 text-[var(--muted)]">
