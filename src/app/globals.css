@@ -3,7 +3,7 @@
 :root {
   --bg: #11130f;
   --bg-soft: #171a14;
-  --panel: rgba(28, 31, 25, 0.78);
+  --panel: rgba(28, 31, 25, 0.76);
   --panel-strong: #1c2019;
   --panel-hover: #23271f;
   --text: #f3efe5;
@@ -27,8 +27,8 @@ html {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(139, 154, 99, 0.12), transparent 32%),
-    radial-gradient(circle at 85% 12%, rgba(203, 174, 106, 0.08), transparent 28%),
+    radial-gradient(circle at top left, rgba(139, 154, 99, 0.1), transparent 32%),
+    radial-gradient(circle at 85% 12%, rgba(203, 174, 106, 0.06), transparent 28%),
     linear-gradient(180deg, #11130f 0%, #121511 40%, #0f110e 100%);
   color: var(--text);
   font-family: var(--font-body), Arial, Helvetica, sans-serif;
@@ -69,16 +69,48 @@ button {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0.015)),
+    linear-gradient(rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0.012)),
     repeating-linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0.012) 0,
-      rgba(255, 255, 255, 0.012) 1px,
+      rgba(255, 255, 255, 0.01) 0,
+      rgba(255, 255, 255, 0.01) 1px,
       transparent 1px,
       transparent 4px
     );
-  opacity: 0.18;
+  opacity: 0.14;
+  z-index: -2;
+}
+
+.hero-banner {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(1400px, 100%);
+  height: 430px;
+  transform: translateX(-50%);
   z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  border-bottom-left-radius: 36px;
+  border-bottom-right-radius: 36px;
+  background:
+    radial-gradient(circle at 18% 28%, rgba(125, 145, 92, 0.28), transparent 44%),
+    radial-gradient(circle at 82% 18%, rgba(181, 158, 99, 0.18), transparent 38%),
+    radial-gradient(circle at 55% 0%, rgba(255, 255, 255, 0.05), transparent 26%),
+    linear-gradient(180deg, rgba(31, 36, 28, 0.96), rgba(18, 20, 17, 0.82));
+  box-shadow: inset 0 -50px 120px rgba(0, 0, 0, 0.28);
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), transparent 82%);
+  opacity: 0.28;
 }
 
 .glass-panel {
@@ -107,9 +139,11 @@ button {
   align-items: center;
   gap: 0.5rem;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.02);
-  padding: 0.65rem 0.95rem;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.7rem 1rem;
   color: var(--muted);
+  border-radius: 999px;
+  backdrop-filter: blur(10px);
 }
 
 .primary-button {
@@ -141,7 +175,7 @@ button {
   padding: 0.95rem 1.35rem;
   border: 1px solid var(--border-strong);
   color: var(--text);
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.03);
   transition:
     transform 0.2s ease,
     background 0.2s ease,
@@ -150,7 +184,7 @@ button {
 
 .secondary-button:hover {
   transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.05);
   border-color: rgba(205, 192, 160, 0.34);
 }
 
@@ -182,7 +216,11 @@ button {
 }
 
 .project-card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.035),
+    rgba(255, 255, 255, 0.018)
+  );
   border: 1px solid var(--border);
   padding: 1.6rem;
   transition:
@@ -194,13 +232,18 @@ button {
 .project-card:hover {
   transform: translateY(-4px);
   border-color: rgba(205, 192, 160, 0.28);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.025)
+  );
 }
 
 .stat-card {
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.03);
   padding: 1.25rem;
+  backdrop-filter: blur(8px);
 }
 
 .section-label {
@@ -227,16 +270,4 @@ button {
   text-transform: uppercase;
   font-size: 0.75rem;
   font-weight: 700;
-}
-
-.hero-grid {
-  display: grid;
-  gap: 2rem;
-}
-
-@media (min-width: 960px) {
-  .hero-grid {
-    grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.7fr);
-    align-items: end;
-  }
 }
