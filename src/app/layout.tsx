@@ -13,7 +13,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Friggy | Systems Engineer & SharePoint Developer",
+  title: "Caroline McLallen | Infastructure & M365",
   description:
     "Professional portfolio for Friggy, a systems engineer and SharePoint developer focused on Microsoft 365, infrastructure, automation, and enterprise platform design.",
 };
