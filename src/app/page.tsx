@@ -126,7 +126,7 @@ export default async function Home() {
           </div>
 
           <h1 className="mt-7 max-w-[14ch] text-[clamp(2.5rem,5vw,4.35rem)] font-semibold leading-[0.96] tracking-[-0.045em]">
-            Remote-ready platform and infrastructure work.
+            M365 & Infrastructure Systems.
           </h1>
 
           <p className="mt-6 max-w-[720px] text-lg leading-8 text-[var(--muted)]">
