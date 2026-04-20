@@ -1,60 +1,159 @@
+const metrics = [
+  {
+    value: "40+",
+    label: "Sites across hybrid infrastructure and Microsoft 365",
+  },
+  {
+    value: "300+",
+    label: "User accounts covered by MFA, Conditional Access, and device policy",
+  },
+  {
+    value: "900+",
+    label: "Operational and infrastructure tickets handled in 12 months",
+  },
+];
+
+const workItems = [
+  {
+    tag: "Microsoft 365 · SharePoint · PowerShell",
+    title: "Microsoft 365 Governance & SharePoint Audit",
+    body: "Audited SharePoint and OneDrive exposure, reviewed external sharing patterns, and built repeatable reporting with PowerShell and PnP to make governance work easier to maintain.",
+  },
+  {
+    tag: "Entra ID · Intune · Endpoint Management",
+    title: "Identity & Endpoint Controls",
+    body: "Worked across MFA, Conditional Access, device compliance, endpoint enrollment, and account governance in a multi-site Microsoft 365 environment.",
+  },
+  {
+    tag: "Infrastructure · Networking · Site Connectivity",
+    title: "Distributed Infrastructure Operations",
+    body: "Worked on switching, ISP transition work, segmentation planning, and network stability improvements across dozens of live production sites.",
+  },
+  {
+    tag: "SharePoint · Information Architecture",
+    title: "Enterprise Intranet Rebuild",
+    body: "Led intranet rebuild work focused on permissions, governance, usability, navigation, and a cleaner structure for long-term administration.",
+  },
+];
+
+const thcBullets = [
+  "Administer Microsoft 365 services including SharePoint, Teams, Exchange, OneDrive, and Entra ID.",
+  "Use PowerShell and PnP for reporting, governance cleanup, and administrative automation.",
+  "Work with identity and endpoint controls including MFA, Conditional Access, Intune, and compliance policy configuration.",
+  "Contribute to hybrid infrastructure administration involving Windows Server, Active Directory, DNS, DHCP, switching, and site connectivity.",
+  "Participate in accessibility and compliance work involving Section 508, WCAG, remediation tracking, and documentation.",
+];
+
+const lawFirmBullets = [
+  "Worked across users, devices, Microsoft services, and day-to-day technology operations.",
+  "Handled troubleshooting across accounts, applications, endpoints, and operational requests.",
+  "Built a foundation in service delivery, documentation, and issue ownership before moving into broader platform and infrastructure work.",
+];
+
+const capabilities = [
+  {
+    title: "Platform Operations",
+    body: "Microsoft 365, SharePoint, Entra ID, endpoint compliance, and user-facing systems that need steady administration.",
+  },
+  {
+    title: "Infrastructure Administration",
+    body: "Switching, site connectivity, Windows Server, Active Directory, DNS, DHCP, and production troubleshooting.",
+  },
+  {
+    title: "Governance & Automation",
+    body: "PowerShell, PnP reporting, permissions review, external sharing cleanup, and repeatable administrative processes.",
+  },
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#17170f] text-[#f4efe3]">
+      <header className="sticky top-0 z-20 border-b border-[#d6a85a]/20 bg-[#17170f]/90 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
+          <a href="/" className="text-sm font-bold tracking-wide text-[#fff8e8]">
+            Caroline McLallen
+          </a>
+
+          <nav
+            aria-label="Main navigation"
+            className="hidden items-center gap-5 text-sm text-[#b9ae99] md:flex"
+          >
+            <a className="transition hover:text-[#d6a85a]" href="/work">
+              Work
+            </a>
+            <a className="transition hover:text-[#d6a85a]" href="/sharepoint">
+              SharePoint / M365
+            </a>
+            <a className="transition hover:text-[#d6a85a]" href="/projects">
+              Projects
+            </a>
+            <a className="transition hover:text-[#d6a85a]" href="#certifications">
+              Certifications
+            </a>
+            <a className="transition hover:text-[#d6a85a]" href="#contact">
+              Contact
+            </a>
+          </nav>
+        </div>
+      </header>
+
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-[#d6a85a]/20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_0%,rgba(214,168,90,0.16),transparent_34%),linear-gradient(180deg,rgba(255,248,232,0.045),transparent_52%)]" />
-        <div className="absolute left-0 top-0 h-full w-1 bg-[#b9652d]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,248,232,0.045),transparent_52%)]" />
+        <div className="absolute left-0 top-0 h-full w-1.5 bg-[#b9652d]" />
 
         <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-28">
-          <div className="mb-6 inline-flex rounded-full border border-[#d6a85a]/30 bg-[#242417]/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#d6a85a]">
+          <div className="mb-6 inline-flex border border-[#d6a85a]/30 bg-[#242417]/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#d6a85a]">
             Platform Operations · Microsoft 365 · Infrastructure
           </div>
 
           <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-[#fff8e8] md:text-6xl">
-            Microsoft 365 and infrastructure work built for real production environments.
+            Microsoft 365 and infrastructure work built for real production
+            environments.
           </h1>
 
           <p className="mt-6 max-w-3xl text-lg leading-8 text-[#d9d0bd]">
-            I work across Microsoft 365, SharePoint, endpoint management, identity,
-            automation, networking, and hybrid infrastructure to make production
-            environments easier to govern, secure, and operate.
+            I work across Microsoft 365, SharePoint, endpoint management,
+            identity, automation, networking, and hybrid infrastructure to make
+            production environments easier to govern, secure, and operate.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="#work"
-              className="rounded-full bg-[#d6a85a] px-5 py-3 text-sm font-semibold text-[#17170f] transition hover:bg-[#e6bd73]"
+              href="/work"
+              className="border border-[#d6a85a] bg-[#d6a85a] px-5 py-3 text-sm font-semibold text-[#17170f] transition hover:bg-[#e6bd73]"
             >
               View Work
             </a>
             <a
               href="https://github.com/figgy-ops"
-              className="rounded-full border border-[#d6a85a]/30 px-5 py-3 text-sm font-semibold text-[#fff8e8] transition hover:bg-[#d6a85a]/10"
+              className="border border-[#d6a85a]/35 px-5 py-3 text-sm font-semibold text-[#fff8e8] transition hover:bg-[#d6a85a]/10"
             >
               GitHub
             </a>
             <a
               href="#contact"
-              className="rounded-full border border-[#b9652d]/45 px-5 py-3 text-sm font-semibold text-[#fff8e8] transition hover:border-[#d6a85a]/45 hover:bg-[#d6a85a]/10"
+              className="border border-[#b9652d]/55 px-5 py-3 text-sm font-semibold text-[#fff8e8] transition hover:border-[#d6a85a]/45 hover:bg-[#d6a85a]/10"
             >
               Contact
             </a>
           </div>
 
           <div className="mt-14 grid gap-4 sm:grid-cols-3">
-            <Metric
-              value="40+"
-              label="Sites across hybrid infrastructure and Microsoft 365"
-            />
-            <Metric
-              value="300+"
-              label="User accounts covered by MFA, Conditional Access, and device policy"
-            />
-            <Metric
-              value="900+"
-              label="Operational and infrastructure tickets handled in 12 months"
-            />
+            {metrics.map((metric) => (
+              <article
+                key={metric.value}
+                className="relative overflow-hidden border border-[#d6a85a]/20 bg-[#202013]/85 p-6 shadow-lg shadow-black/15"
+              >
+                <div className="absolute left-0 top-0 h-full w-1.5 bg-[#b9652d]/85" />
+                <p className="pl-2 text-4xl font-semibold text-[#fff8e8]">
+                  {metric.value}
+                </p>
+                <p className="mt-3 pl-2 text-sm leading-6 text-[#b9ae99]">
+                  {metric.label}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -68,26 +167,23 @@ export default function Home() {
         />
 
         <div className="mt-10 grid gap-5 md:grid-cols-2">
-          <WorkCard
-            tag="Microsoft 365 · SharePoint · PowerShell"
-            title="Microsoft 365 Governance & SharePoint Audit"
-            body="Audited SharePoint and OneDrive exposure, reviewed external sharing patterns, and built repeatable reporting with PowerShell and PnP to make governance work easier to maintain."
-          />
-          <WorkCard
-            tag="Entra ID · Intune · Endpoint Management"
-            title="Identity & Endpoint Controls"
-            body="Worked across MFA, Conditional Access, device compliance, endpoint enrollment, and account governance in a multi-site Microsoft 365 environment."
-          />
-          <WorkCard
-            tag="Infrastructure · Networking · Site Connectivity"
-            title="Distributed Infrastructure Operations"
-            body="Worked on switching, ISP transition work, segmentation planning, and network stability improvements across dozens of live production sites."
-          />
-          <WorkCard
-            tag="SharePoint · Information Architecture"
-            title="Enterprise Intranet Rebuild"
-            body="Led intranet rebuild work focused on permissions, governance, usability, navigation, and a cleaner structure for long-term administration."
-          />
+          {workItems.map((item) => (
+            <WorkCard
+              key={item.title}
+              tag={item.tag}
+              title={item.title}
+              body={item.body}
+            />
+          ))}
+        </div>
+
+        <div className="mt-8">
+          <a
+            href="/work"
+            className="inline-flex border-b border-[#b9652d] pb-1 text-sm font-semibold text-[#d6a85a] transition hover:text-[#fff8e8]"
+          >
+            View more work
+          </a>
         </div>
       </section>
 
@@ -104,8 +200,8 @@ export default function Home() {
           />
 
           <div className="mt-10 grid gap-5 lg:grid-cols-[1.35fr_0.9fr]">
-            <article className="relative overflow-hidden rounded-3xl border border-[#d6a85a]/30 bg-[#17170f]/85 p-6 shadow-2xl shadow-black/20">
-              <div className="absolute left-0 top-0 h-full w-1 bg-[#b9652d]" />
+            <article className="relative overflow-hidden border border-[#d6a85a]/30 bg-[#17170f]/85 p-6 shadow-2xl shadow-black/20">
+              <div className="absolute left-0 top-0 h-full w-1.5 bg-[#b9652d]" />
 
               <div className="grid gap-6 pl-2 md:grid-cols-[1fr_230px]">
                 <div>
@@ -121,34 +217,27 @@ export default function Home() {
                     distributed environments.
                   </p>
 
-                  <ul className="mt-5 space-y-2 text-sm text-[#d9d0bd]">
-                    <li>
-                      <span className="text-[#9f967f]">Issued:</span> October 2025
-                    </li>
-                    <li>
-                      <span className="text-[#9f967f]">Expires:</span> October 2027
-                    </li>
-                    <li>
-                      <span className="text-[#9f967f]">Credential ID:</span>{" "}
-                      5036577450CM
-                    </li>
-                  </ul>
+                  <SquareList
+                    items={[
+                      "Issued: October 2025",
+                      "Expires: October 2027",
+                      "Credential ID: 5036577450CM",
+                    ]}
+                  />
                 </div>
 
-                <div className="flex min-h-[220px] items-center justify-center rounded-2xl border border-dashed border-[#d6a85a]/40 bg-[#242417] p-4 text-center text-sm text-[#b9ae99]">
+                <div className="flex min-h-[220px] items-center justify-center border border-dashed border-[#d6a85a]/40 bg-[#242417] p-4 text-center text-sm text-[#b9ae99]">
                   <div>
                     <p className="font-medium text-[#fff8e8]">
                       Certificate image
                     </p>
-                    <p className="mt-2">
-                      Placeholder for Fortinet cert image
-                    </p>
+                    <p className="mt-2">Placeholder for Fortinet cert image</p>
                   </div>
                 </div>
               </div>
             </article>
 
-            <article className="rounded-3xl border border-[#d6a85a]/20 bg-[#17170f]/85 p-6">
+            <article className="border border-[#d6a85a]/20 bg-[#17170f]/85 p-6 shadow-lg shadow-black/15">
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#b9652d]">
                 Microsoft · Systems Administration
               </p>
@@ -160,11 +249,8 @@ export default function Home() {
                 endpoint management, Windows-based environments, and operational IT
                 work.
               </p>
-              <ul className="mt-5 space-y-2 text-sm text-[#d9d0bd]">
-                <li>
-                  <span className="text-[#9f967f]">Issued:</span> January 2025
-                </li>
-              </ul>
+
+              <SquareList items={["Issued: January 2025"]} />
             </article>
           </div>
         </div>
@@ -184,13 +270,7 @@ export default function Home() {
             company="Texas Historical Commission"
             dates="January 2024 to present"
             body="Work across Microsoft 365, SharePoint, endpoint operations, account governance, and infrastructure administration in a distributed public-sector environment."
-            bullets={[
-              "Administer Microsoft 365 services including SharePoint, Teams, Exchange, OneDrive, and Entra ID.",
-              "Use PowerShell and PnP for reporting, governance cleanup, and administrative automation.",
-              "Work with identity and endpoint controls including MFA, Conditional Access, Intune, and compliance policy configuration.",
-              "Contribute to hybrid infrastructure administration involving Windows Server, Active Directory, DNS, DHCP, switching, and site connectivity.",
-              "Participate in accessibility and compliance work involving Section 508, WCAG, remediation tracking, and documentation."
-            ]}
+            bullets={thcBullets}
           />
 
           <ExperienceCard
@@ -198,11 +278,7 @@ export default function Home() {
             company="Private Law Firm"
             dates="January 2022 to August 2024"
             body="Worked in a professional services environment with exposure to Microsoft cloud services, endpoint troubleshooting, account administration, and operational technology needs."
-            bullets={[
-              "Worked across users, devices, Microsoft services, and day-to-day technology operations.",
-              "Handled troubleshooting across accounts, applications, endpoints, and operational requests.",
-              "Built a foundation in service delivery, documentation, and issue ownership before moving into broader platform and infrastructure work."
-            ]}
+            bullets={lawFirmBullets}
           />
         </div>
       </section>
@@ -217,18 +293,13 @@ export default function Home() {
           />
 
           <div className="mt-10 grid gap-5 md:grid-cols-3">
-            <FocusCard
-              title="Platform Operations"
-              body="Microsoft 365, SharePoint, Entra ID, endpoint compliance, and user-facing systems that need steady administration."
-            />
-            <FocusCard
-              title="Infrastructure Administration"
-              body="Switching, site connectivity, Windows Server, Active Directory, DNS, DHCP, and production troubleshooting."
-            />
-            <FocusCard
-              title="Governance & Automation"
-              body="PowerShell, PnP reporting, permissions review, external sharing cleanup, and repeatable administrative processes."
-            />
+            {capabilities.map((capability) => (
+              <FocusCard
+                key={capability.title}
+                title={capability.title}
+                body={capability.body}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -242,46 +313,35 @@ export default function Home() {
         />
 
         <div className="mt-10 grid gap-5 md:grid-cols-2">
-          <a
+          <ProjectCard
             href="https://github.com/figgy-ops/figgy-pro"
-            className="group rounded-3xl border border-[#d6a85a]/20 bg-[#202013] p-6 transition hover:border-[#d6a85a]/50 hover:bg-[#252517]"
-          >
-            <p className="text-sm font-semibold text-[#d6a85a]">
-              TypeScript · Apr 2026
-            </p>
-            <h3 className="mt-3 text-xl font-semibold text-[#fff8e8]">
-              Figgy Pro
-            </h3>
-            <p className="mt-3 leading-7 text-[#d9d0bd]">
-              Portfolio site work and frontend experimentation for professional
-              positioning, project display, and custom embeds.
-            </p>
-            <div className="mt-5 h-px w-16 bg-[#b9652d] transition group-hover:w-24" />
-          </a>
+            tag="TypeScript · Apr 2026"
+            title="Figgy Pro"
+            body="Portfolio site work and frontend experimentation for professional positioning, project display, and custom embeds."
+          />
 
-          <a
+          <ProjectCard
             href="https://github.com/figgy-ops/spfx-command-center"
-            className="group rounded-3xl border border-[#d6a85a]/20 bg-[#202013] p-6 transition hover:border-[#d6a85a]/50 hover:bg-[#252517]"
+            tag="TypeScript · Apr 2026"
+            title="SPFx Command Center"
+            body="SharePoint Framework project work focused on practical admin visibility, site administration, and Microsoft 365 operational tooling."
+          />
+        </div>
+
+        <div className="mt-8">
+          <a
+            href="/projects"
+            className="inline-flex border-b border-[#b9652d] pb-1 text-sm font-semibold text-[#d6a85a] transition hover:text-[#fff8e8]"
           >
-            <p className="text-sm font-semibold text-[#d6a85a]">
-              TypeScript · Apr 2026
-            </p>
-            <h3 className="mt-3 text-xl font-semibold text-[#fff8e8]">
-              SPFx Command Center
-            </h3>
-            <p className="mt-3 leading-7 text-[#d9d0bd]">
-              SharePoint Framework project work focused on practical admin
-              visibility, site administration, and Microsoft 365 operational tooling.
-            </p>
-            <div className="mt-5 h-px w-16 bg-[#b9652d] transition group-hover:w-24" />
+            View projects
           </a>
         </div>
       </section>
 
       {/* CONTACT */}
       <section id="contact" className="mx-auto max-w-6xl px-6 py-20">
-        <div className="relative overflow-hidden rounded-3xl border border-[#d6a85a]/25 bg-[#202013] p-8 md:p-10">
-          <div className="absolute left-0 top-0 h-full w-1 bg-[#b9652d]" />
+        <div className="relative overflow-hidden border border-[#d6a85a]/25 bg-[#202013] p-8 md:p-10">
+          <div className="absolute left-0 top-0 h-full w-1.5 bg-[#b9652d]" />
           <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-[#d6a85a]/45 to-transparent" />
 
           <div className="relative pl-2">
@@ -300,19 +360,19 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="mailto:caroline360@gmail.com"
-                className="rounded-full bg-[#d6a85a] px-5 py-3 text-sm font-semibold text-[#17170f] transition hover:bg-[#e6bd73]"
+                className="border border-[#d6a85a] bg-[#d6a85a] px-5 py-3 text-sm font-semibold text-[#17170f] transition hover:bg-[#e6bd73]"
               >
                 Email Me
               </a>
               <a
                 href="https://github.com/figgy-ops"
-                className="rounded-full border border-[#d6a85a]/30 px-5 py-3 text-sm font-semibold text-[#fff8e8] transition hover:bg-[#d6a85a]/10"
+                className="border border-[#d6a85a]/35 px-5 py-3 text-sm font-semibold text-[#fff8e8] transition hover:bg-[#d6a85a]/10"
               >
                 GitHub
               </a>
               <a
                 href="https://www.linkedin.com/in/caroline-mclallen/"
-                className="rounded-full border border-[#b9652d]/45 px-5 py-3 text-sm font-semibold text-[#fff8e8] transition hover:border-[#d6a85a]/45 hover:bg-[#d6a85a]/10"
+                className="border border-[#b9652d]/55 px-5 py-3 text-sm font-semibold text-[#fff8e8] transition hover:border-[#d6a85a]/45 hover:bg-[#d6a85a]/10"
               >
                 LinkedIn
               </a>
@@ -324,20 +384,10 @@ export default function Home() {
   );
 }
 
-function Metric({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="relative overflow-hidden rounded-3xl border border-[#d6a85a]/20 bg-[#202013]/85 p-6 shadow-lg shadow-black/15">
-      <div className="absolute left-0 top-0 h-full w-1 bg-[#b9652d]/80" />
-      <p className="pl-2 text-4xl font-semibold text-[#fff8e8]">{value}</p>
-      <p className="mt-3 pl-2 text-sm leading-6 text-[#b9ae99]">{label}</p>
-    </div>
-  );
-}
-
 function SectionHeader({
   eyebrow,
   title,
-  body
+  body,
 }: {
   eyebrow: string;
   title: string;
@@ -359,18 +409,19 @@ function SectionHeader({
 function WorkCard({
   tag,
   title,
-  body
+  body,
 }: {
   tag: string;
   title: string;
   body: string;
 }) {
   return (
-    <article className="group rounded-3xl border border-[#d6a85a]/20 bg-[#202013] p-6 shadow-lg shadow-black/10 transition hover:border-[#d6a85a]/45 hover:bg-[#252517]">
+    <article className="group border border-[#d6a85a]/20 bg-[#202013] p-6 shadow-lg shadow-black/10 transition hover:border-[#d6a85a]/45 hover:bg-[#252517]">
+      <div className="mb-5 h-1 w-12 bg-[#b9652d]" />
       <p className="text-sm font-semibold text-[#d6a85a]">{tag}</p>
       <h3 className="mt-3 text-xl font-semibold text-[#fff8e8]">{title}</h3>
       <p className="mt-3 leading-7 text-[#d9d0bd]">{body}</p>
-      <div className="mt-5 h-px w-12 bg-[#b9652d] transition group-hover:w-20" />
+      <div className="mt-5 h-1 w-10 bg-[#b9652d]/75 transition-all group-hover:w-20" />
     </article>
   );
 }
@@ -380,7 +431,7 @@ function ExperienceCard({
   company,
   dates,
   body,
-  bullets
+  bullets,
 }: {
   title: string;
   company: string;
@@ -389,7 +440,7 @@ function ExperienceCard({
   bullets: string[];
 }) {
   return (
-    <article className="rounded-3xl border border-[#d6a85a]/20 bg-[#202013] p-6 shadow-lg shadow-black/10">
+    <article className="border border-[#d6a85a]/20 bg-[#202013] p-6 shadow-lg shadow-black/10">
       <div className="flex flex-col gap-2 border-b border-[#d6a85a]/15 pb-5 md:flex-row md:items-start md:justify-between">
         <div>
           <h3 className="text-xl font-semibold text-[#fff8e8]">{title}</h3>
@@ -399,25 +450,54 @@ function ExperienceCard({
       </div>
 
       <p className="mt-5 leading-7 text-[#d9d0bd]">{body}</p>
-
-      <ul className="mt-5 space-y-3 text-sm leading-6 text-[#d9d0bd]">
-        {bullets.map((bullet) => (
-          <li key={bullet} className="flex gap-3">
-            <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-[#b9652d]" />
-            <span>{bullet}</span>
-          </li>
-        ))}
-      </ul>
+      <SquareList items={bullets} />
     </article>
   );
 }
 
 function FocusCard({ title, body }: { title: string; body: string }) {
   return (
-    <article className="rounded-3xl border border-[#d6a85a]/20 bg-[#17170f]/80 p-6 shadow-lg shadow-black/10">
-      <div className="mb-4 h-px w-14 bg-[#b9652d]" />
+    <article className="border border-[#d6a85a]/20 bg-[#17170f]/80 p-6 shadow-lg shadow-black/10">
+      <div className="mb-4 h-1 w-12 bg-[#b9652d]" />
       <h3 className="text-xl font-semibold text-[#fff8e8]">{title}</h3>
       <p className="mt-3 leading-7 text-[#d9d0bd]">{body}</p>
     </article>
+  );
+}
+
+function ProjectCard({
+  href,
+  tag,
+  title,
+  body,
+}: {
+  href: string;
+  tag: string;
+  title: string;
+  body: string;
+}) {
+  return (
+    <a
+      href={href}
+      className="group border border-[#d6a85a]/20 bg-[#202013] p-6 text-inherit no-underline shadow-lg shadow-black/10 transition hover:border-[#d6a85a]/45 hover:bg-[#252517]"
+    >
+      <p className="text-sm font-semibold text-[#d6a85a]">{tag}</p>
+      <h3 className="mt-3 text-xl font-semibold text-[#fff8e8]">{title}</h3>
+      <p className="mt-3 leading-7 text-[#d9d0bd]">{body}</p>
+      <div className="mt-5 h-1 w-14 bg-[#b9652d] transition-all group-hover:w-24" />
+    </a>
+  );
+}
+
+function SquareList({ items }: { items: string[] }) {
+  return (
+    <ul className="mt-5 space-y-3 text-sm leading-6 text-[#d9d0bd]">
+      {items.map((item) => (
+        <li key={item} className="flex gap-3">
+          <span className="mt-2 h-2 w-2 flex-none bg-[#b9652d]" />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
   );
 }
