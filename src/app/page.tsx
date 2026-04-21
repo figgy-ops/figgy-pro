@@ -70,7 +70,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#17170f] text-[#f4efe3]">
       <header className="sticky top-0 z-20 border-b border-[#d6a85a]/20 bg-[#17170f]/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
-          <a href="/" className="text-sm font-bold tracking-wide text-[#fff8e8]">
+          <a href="#top" className="text-sm font-bold tracking-wide text-[#fff8e8]">
             Caroline McLallen
           </a>
 
@@ -78,17 +78,17 @@ export default function Home() {
             aria-label="Main navigation"
             className="hidden items-center gap-5 text-sm text-[#b9ae99] md:flex"
           >
-            <a className="transition hover:text-[#d6a85a]" href="/work">
+            <a className="transition hover:text-[#d6a85a]" href="#work">
               Work
-            </a>
-            <a className="transition hover:text-[#d6a85a]" href="/sharepoint">
-              SharePoint / M365
-            </a>
-            <a className="transition hover:text-[#d6a85a]" href="/projects">
-              Projects
             </a>
             <a className="transition hover:text-[#d6a85a]" href="#certifications">
               Certifications
+            </a>
+            <a className="transition hover:text-[#d6a85a]" href="#experience">
+              Experience
+            </a>
+            <a className="transition hover:text-[#d6a85a]" href="#github">
+              GitHub
             </a>
             <a className="transition hover:text-[#d6a85a]" href="#contact">
               Contact
@@ -98,7 +98,10 @@ export default function Home() {
       </header>
 
       {/* HERO */}
-      <section className="relative overflow-hidden border-b border-[#d6a85a]/20">
+      <section
+        id="top"
+        className="relative overflow-hidden border-b border-[#d6a85a]/20"
+      >
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,248,232,0.045),transparent_52%)]" />
         <div className="absolute left-0 top-0 h-full w-1.5 bg-[#b9652d]" />
 
@@ -120,13 +123,15 @@ export default function Home() {
 
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="/work"
+              href="#work"
               className="border border-[#d6a85a] bg-[#d6a85a] px-5 py-3 text-sm font-semibold text-[#17170f] transition hover:bg-[#e6bd73]"
             >
               View Work
             </a>
             <a
               href="https://github.com/figgy-ops"
+              target="_blank"
+              rel="noreferrer"
               className="border border-[#d6a85a]/35 px-5 py-3 text-sm font-semibold text-[#fff8e8] transition hover:bg-[#d6a85a]/10"
             >
               GitHub
@@ -159,7 +164,7 @@ export default function Home() {
       </section>
 
       {/* SELECTED WORK */}
-      <section id="work" className="mx-auto max-w-6xl px-6 py-20">
+      <section id="work" className="mx-auto max-w-6xl px-6 py-20 scroll-mt-24">
         <SectionHeader
           eyebrow="Selected Work"
           title="Operational work with governance, automation, and infrastructure impact."
@@ -179,10 +184,10 @@ export default function Home() {
 
         <div className="mt-8">
           <a
-            href="/work"
+            href="#experience"
             className="inline-flex border-b border-[#b9652d] pb-1 text-sm font-semibold text-[#d6a85a] transition hover:text-[#fff8e8]"
           >
-            View more work
+            View experience
           </a>
         </div>
       </section>
@@ -190,7 +195,7 @@ export default function Home() {
       {/* CERTIFICATIONS */}
       <section
         id="certifications"
-        className="border-y border-[#d6a85a]/20 bg-[#202013]"
+        className="scroll-mt-24 border-y border-[#d6a85a]/20 bg-[#202013]"
       >
         <div className="mx-auto max-w-6xl px-6 py-20">
           <SectionHeader
@@ -257,7 +262,10 @@ export default function Home() {
       </section>
 
       {/* EXPERIENCE */}
-      <section id="experience" className="mx-auto max-w-6xl px-6 py-20">
+      <section
+        id="experience"
+        className="mx-auto max-w-6xl px-6 py-20 scroll-mt-24"
+      >
         <SectionHeader
           eyebrow="Experience"
           title="Platform operations across systems, identity, and infrastructure."
@@ -305,7 +313,7 @@ export default function Home() {
       </section>
 
       {/* GITHUB */}
-      <section id="github" className="mx-auto max-w-6xl px-6 py-20">
+      <section id="github" className="mx-auto max-w-6xl px-6 py-20 scroll-mt-24">
         <SectionHeader
           eyebrow="GitHub"
           title="Recent code and active work."
@@ -327,19 +335,13 @@ export default function Home() {
             body="SharePoint Framework project work focused on practical admin visibility, site administration, and Microsoft 365 operational tooling."
           />
         </div>
-
-        <div className="mt-8">
-          <a
-            href="/projects"
-            className="inline-flex border-b border-[#b9652d] pb-1 text-sm font-semibold text-[#d6a85a] transition hover:text-[#fff8e8]"
-          >
-            View projects
-          </a>
-        </div>
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="mx-auto max-w-6xl px-6 py-20">
+      <section
+        id="contact"
+        className="mx-auto max-w-6xl px-6 py-20 scroll-mt-24"
+      >
         <div className="relative overflow-hidden border border-[#d6a85a]/25 bg-[#202013] p-8 md:p-10">
           <div className="absolute left-0 top-0 h-full w-1.5 bg-[#b9652d]" />
           <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-[#d6a85a]/45 to-transparent" />
@@ -366,12 +368,16 @@ export default function Home() {
               </a>
               <a
                 href="https://github.com/figgy-ops"
+                target="_blank"
+                rel="noreferrer"
                 className="border border-[#d6a85a]/35 px-5 py-3 text-sm font-semibold text-[#fff8e8] transition hover:bg-[#d6a85a]/10"
               >
                 GitHub
               </a>
               <a
                 href="https://www.linkedin.com/in/caroline-mclallen/"
+                target="_blank"
+                rel="noreferrer"
                 className="border border-[#b9652d]/55 px-5 py-3 text-sm font-semibold text-[#fff8e8] transition hover:border-[#d6a85a]/45 hover:bg-[#d6a85a]/10"
               >
                 LinkedIn
@@ -479,7 +485,9 @@ function ProjectCard({
   return (
     <a
       href={href}
-      className="group border border-[#d6a85a]/20 bg-[#202013] p-6 text-inherit no-underline shadow-lg shadow-black/10 transition hover:border-[#d6a85a]/45 hover:bg-[#252517]"
+      target="_blank"
+      rel="noreferrer"
+      className="group block border border-[#d6a85a]/20 bg-[#202013] p-6 text-inherit no-underline shadow-lg shadow-black/10 transition hover:border-[#d6a85a]/45 hover:bg-[#252517]"
     >
       <p className="text-sm font-semibold text-[#d6a85a]">{tag}</p>
       <h3 className="mt-3 text-xl font-semibold text-[#fff8e8]">{title}</h3>
