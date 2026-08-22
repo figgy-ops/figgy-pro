@@ -1,79 +1,87 @@
 const projects = [
   {
-    number: "01",
+    index: "01",
     title: "Intern LaunchPad",
-    summary:
-      "A custom employee-facing application that gave interns and supervisors one clear place for program information, people, and weekly time reporting.",
-    contribution:
-      "Built the SharePoint Framework experience in React and TypeScript, connected the logging flow through Forms and Power Automate, and designed the interface for keyboard and screen-reader use.",
-    stack: ["SPFx", "React", "TypeScript", "Power Automate", "SharePoint"],
+    context: "Internal application",
+    description:
+      "Employee-facing program hub for intern information, supervisor resources, and weekly time reporting.",
+    implementation:
+      "Built the SPFx interface in React and TypeScript; connected Microsoft Forms and Power Automate; implemented keyboard and screen-reader support.",
+    stack: "SPFx · React · TypeScript · Power Automate · SharePoint",
   },
   {
-    number: "02",
+    index: "02",
     title: "Enterprise intranet and governance",
-    summary:
-      "A long-term rebuild of the agency intranet and the operating model around hundreds of SharePoint sites.",
-    contribution:
-      "Restructured navigation and information architecture, clarified ownership and permissions, created reusable provisioning patterns, and automated reporting and governance work with PnP PowerShell.",
-    stack: ["SharePoint Online", "PnP PowerShell", "Governance", "Accessibility"],
+    context: "Platform modernization",
+    description:
+      "Intranet rebuild and operating model for an agency SharePoint environment with more than 500 sites.",
+    implementation:
+      "Restructured navigation and information architecture; standardized ownership and permissions; built reusable provisioning and PnP PowerShell reporting.",
+    stack: "SharePoint Online · PnP PowerShell · Governance · WCAG",
   },
   {
-    number: "03",
+    index: "03",
     title: "Operational automation",
-    summary:
-      "Repeatable workflows for onboarding, approvals, reporting, provisioning, access reviews, and other work that should not depend on someone remembering every step.",
-    contribution:
-      "Translate the actual business process, connect the systems involved, build the automation, and leave behind monitoring and documentation that make it supportable.",
-    stack: ["Power Automate", "PowerShell", "APIs", "Microsoft 365"],
+    context: "Process engineering",
+    description:
+      "Workflows for onboarding, approvals, reporting, provisioning, access reviews, and recurring administrative work.",
+    implementation:
+      "Mapped business rules and dependencies, connected source systems, built the automation, and documented monitoring and support procedures.",
+    stack: "Power Automate · PowerShell · APIs · Microsoft 365",
   },
   {
-    number: "04",
+    index: "04",
     title: "Accessible web platforms",
-    summary:
-      "Modern public and internal web experiences that are easier to navigate, maintain, and trust.",
-    contribution:
-      "Build responsive interfaces with clear content structure, accessible interaction patterns, and practical administration in mind, including a production site for a private law firm.",
-    stack: ["Next.js", "React", "TypeScript", "WCAG"],
+    context: "Web engineering",
+    description:
+      "Responsive public and internal websites with maintainable content structure and accessible interactions.",
+    implementation:
+      "Developed React and Next.js interfaces, including a production site for a private law firm, with WCAG requirements treated as implementation constraints.",
+    stack: "Next.js · React · TypeScript · WCAG",
   },
 ];
 
-const capabilities = [
+const technicalGroups = [
   {
-    title: "Automation and integration",
-    detail:
-      "Power Automate, PowerShell, APIs, approvals, provisioning, reporting, and cross-system workflow design.",
+    label: "Automation",
+    items: "Power Automate, PowerShell, PnP, REST APIs, approvals, provisioning, reporting",
   },
   {
-    title: "Enterprise applications",
-    detail:
-      "SharePoint Online, SPFx, Microsoft 365, internal tools, information architecture, and application modernization.",
+    label: "Applications",
+    items: "SharePoint Online, SPFx, Microsoft 365, Forms, internal tools, information architecture",
   },
   {
-    title: "Web engineering",
-    detail:
-      "React, TypeScript, Next.js, accessible interface development, and maintainable content experiences.",
+    label: "Engineering",
+    items: "TypeScript, React, Next.js, Git, accessible interfaces, systems integration",
   },
   {
-    title: "Governance and identity",
-    detail:
-      "Permissions, guest access, Entra ID, lifecycle controls, accessibility, documentation, and operational ownership.",
-  },
-  {
-    title: "Infrastructure fluency",
-    detail:
-      "Cisco switching, Fortinet, VPN, DNS, DHCP, site connectivity, incident response, and infrastructure-aware design.",
-  },
-  {
-    title: "Systems analysis",
-    detail:
-      "Process discovery, requirements, risk and dependency mapping, stakeholder translation, testing, and support handoff.",
+    label: "Operations",
+    items: "Entra ID, permissions, Intune, Cisco switching, Fortinet, VPN, DNS, DHCP",
   },
 ];
 
-const scope = [
-  { value: "40+", label: "distributed agency sites" },
-  { value: "500+", label: "SharePoint sites in the environment" },
-  { value: "300+", label: "users supported by shared platforms" },
+const experience = [
+  {
+    period: "Current",
+    title: "Systems Analyst / Automation Specialist",
+    employer: "Texas Historical Commission",
+    detail:
+      "Automation, systems integration, enterprise applications, SharePoint and Power Platform administration, governance, identity, reporting, and technical support across a distributed public-sector environment.",
+  },
+  {
+    period: "Earlier agency scope",
+    title: "IT support and platform administration",
+    employer: "Texas Historical Commission",
+    detail:
+      "Microsoft 365 administration, endpoint support, field-site connectivity, switching, firewalls, access management, and incident coordination.",
+  },
+  {
+    period: "2022–2024",
+    title: "IT Specialist",
+    employer: "Private law firm",
+    detail:
+      "Technology operations, user and endpoint support, Microsoft cloud administration, documentation, troubleshooting, and a public website rebuild.",
+  },
 ];
 
 export default function Home() {
@@ -86,111 +94,92 @@ export default function Home() {
       <header className="site-header">
         <div className="container header-inner">
           <a className="brand" href="#top" aria-label="Caroline McLallen, home">
-            <span className="brand-mark" aria-hidden="true">
-              CM
-            </span>
-            <span>Caroline McLallen</span>
+            Caroline McLallen
           </a>
 
           <nav className="nav" aria-label="Primary navigation">
             <a href="#work">Work</a>
-            <a href="#capabilities">Capabilities</a>
             <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
           </nav>
-
-          <a
-            className="header-link"
-            href="https://github.com/figgy-ops"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub <span aria-hidden="true">↗</span>
-          </a>
         </div>
       </header>
 
       <div id="content">
-        <section className="hero">
-          <div className="container hero-grid">
-            <div className="hero-copy">
-              <p className="eyebrow">Automation Specialist / Systems Analyst</p>
-              <h1>Automation, integrations, and enterprise applications.</h1>
-              <p className="hero-intro">
-                I design and build automations, integrations, internal tools, and
-                enterprise platforms. My work spans Power Platform, SharePoint,
-                APIs, identity, reporting, websites, and the infrastructure around
-                them.
-              </p>
-
-              <div className="hero-actions">
-                <a className="button button-primary" href="#work">
-                  See selected work
+        <section className="resume-intro" aria-labelledby="intro-heading">
+          <div className="container">
+            <div className="intro-heading">
+              <div>
+                <p className="role">Automation Specialist / Systems Analyst</p>
+                <h1 id="intro-heading">Caroline McLallen</h1>
+              </div>
+              <div className="contact-strip" aria-label="Profile links">
+                <a href="mailto:caroline360@gmail.com">Email</a>
+                <a
+                  href="https://github.com/figgy-ops"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub <span aria-hidden="true">↗</span>
                 </a>
-                <a className="button button-secondary" href="#contact">
-                  Get in touch
+                <a
+                  href="https://www.linkedin.com/in/caroline-mclallen/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  LinkedIn <span aria-hidden="true">↗</span>
                 </a>
               </div>
             </div>
 
-            <aside className="role-card" aria-label="Current role overview">
-              <div className="role-card-header">
-                <p>Current role</p>
-                <span>Texas public sector</span>
-              </div>
-              <h2>Current scope</h2>
-              <p className="role-subtitle">Automation Specialist / Systems Analyst</p>
+            <p className="summary">
+              Builds and supports automation, integrations, enterprise applications,
+              and internal platforms in a distributed public-sector environment.
+              Current work spans Power Platform, SharePoint/SPFx, PowerShell/PnP,
+              React/Next.js, identity, governance, reporting, and infrastructure-aware
+              operations.
+            </p>
 
-              <ol className="work-flow" aria-label="How I approach systems work">
-                <li>
-                  <span>01</span>
-                  <p>Automation and systems integration.</p>
-                </li>
-                <li>
-                  <span>02</span>
-                  <p>Enterprise applications and modernization.</p>
-                </li>
-                <li>
-                  <span>03</span>
-                  <p>Governance, reporting, and operational support.</p>
-                </li>
-              </ol>
-            </aside>
-          </div>
-
-          <div className="container scope-grid" aria-label="Current environment scope">
-            {scope.map((item) => (
-              <div className="scope-item" key={item.value}>
-                <strong>{item.value}</strong>
-                <span>{item.label}</span>
+            <dl className="profile-grid">
+              <div>
+                <dt>Organization</dt>
+                <dd>Texas Historical Commission</dd>
               </div>
-            ))}
+              <div>
+                <dt>Primary scope</dt>
+                <dd>Automation, integration, modernization</dd>
+              </div>
+              <div>
+                <dt>Environment</dt>
+                <dd>40+ sites · 500+ SharePoint sites · 300+ users</dd>
+              </div>
+              <div>
+                <dt>Core tools</dt>
+                <dd>Power Automate · PowerShell · TypeScript · React · SPFx</dd>
+              </div>
+            </dl>
           </div>
         </section>
 
-        <section className="section" id="work">
+        <section className="section" id="work" aria-labelledby="work-heading">
           <div className="container">
-            <SectionHeading
-              label="Selected work"
-              title="Selected projects and operational work."
-              copy="Work across internal applications, process automation, SharePoint governance, and accessible web development."
-            />
+            <SectionHeader index="01" title="Selected systems work" id="work-heading" />
 
             <div className="project-list">
               {projects.map((project) => (
-                <article className="project" key={project.title}>
-                  <p className="project-number">{project.number}</p>
-                  <div className="project-main">
+                <article className="project-row" key={project.title}>
+                  <div className="project-id">
+                    <span>{project.index}</span>
+                    <p>{project.context}</p>
+                  </div>
+                  <div className="project-title">
                     <h3>{project.title}</h3>
-                    <p className="project-summary">{project.summary}</p>
+                    <p>{project.description}</p>
                   </div>
-                  <div className="project-detail">
-                    <p>{project.contribution}</p>
-                    <ul className="tag-list" aria-label={`${project.title} technologies`}>
-                      {project.stack.map((item) => (
-                        <li key={item}>{item}</li>
-                      ))}
-                    </ul>
+                  <div className="project-implementation">
+                    <p>{project.implementation}</p>
+                    <p className="stack">{project.stack}</p>
                   </div>
                 </article>
               ))}
@@ -198,111 +187,59 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section section-tinted" id="capabilities">
+        <section className="section section-muted" id="experience" aria-labelledby="experience-heading">
           <div className="container">
-            <SectionHeading
-              label="Capabilities"
-              title="Technical capabilities."
-              copy="Experience across applications, automation, governance, infrastructure, and systems analysis."
-            />
+            <SectionHeader index="02" title="Experience" id="experience-heading" />
 
-            <div className="capability-grid">
-              {capabilities.map((capability, index) => (
-                <article className="capability" key={capability.title}>
-                  <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
-                  <h3>{capability.title}</h3>
-                  <p>{capability.detail}</p>
+            <div className="experience-list">
+              {experience.map((item) => (
+                <article className="experience-row" key={`${item.title}-${item.period}`}>
+                  <p className="period">{item.period}</p>
+                  <div>
+                    <h3>{item.title}</h3>
+                    <p className="employer">{item.employer}</p>
+                  </div>
+                  <p className="experience-detail">{item.detail}</p>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="section" id="experience">
-          <div className="container experience-layout">
-            <SectionHeading
-              label="Experience"
-              title="Current and previous roles."
-              copy="My background includes automation, platform administration, technical support, web development, and infrastructure work."
-            />
+        <section className="section" id="skills" aria-labelledby="skills-heading">
+          <div className="container">
+            <SectionHeader index="03" title="Technical profile" id="skills-heading" />
 
-            <div className="timeline">
-              <article className="timeline-item current">
-                <div className="timeline-marker" aria-hidden="true" />
-                <p className="timeline-date">Current</p>
-                <h3>Systems Analyst / Automation Specialist</h3>
-                <p className="timeline-company">Texas Historical Commission</p>
-                <p>
-                  Lead automation, modernization, integration, and enterprise
-                  application work while continuing to own complex SharePoint,
-                  Power Platform, governance, web, identity, and cross-functional
-                  systems problems.
-                </p>
-              </article>
-
-              <article className="timeline-item">
-                <div className="timeline-marker" aria-hidden="true" />
-                <p className="timeline-date">Earlier agency scope</p>
-                <h3>IT support and platform administration</h3>
-                <p className="timeline-company">Texas Historical Commission</p>
-                <p>
-                  Worked across end-user support, Microsoft 365 administration,
-                  SharePoint development, field-site connectivity, switching,
-                  firewalls, access, and incident coordination across a distributed
-                  environment.
-                </p>
-              </article>
-
-              <article className="timeline-item">
-                <div className="timeline-marker" aria-hidden="true" />
-                <p className="timeline-date">2022 to 2024</p>
-                <h3>IT Specialist</h3>
-                <p className="timeline-company">Private law firm</p>
-                <p>
-                  Owned day-to-day technology operations, user and endpoint support,
-                  Microsoft cloud administration, troubleshooting, documentation,
-                  and an accessible public website rebuild.
-                </p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section className="section credential-section">
-          <div className="container credential-grid">
-            <div>
-              <p className="section-label">Credentials</p>
-              <h2>Certifications and training.</h2>
-            </div>
-
-            <div className="credential-list">
-              <article>
-                <div>
-                  <p>Fortinet</p>
-                  <h3>Network Security Expert Level 3: Certified Associate</h3>
+            <dl className="technical-grid">
+              {technicalGroups.map((group) => (
+                <div key={group.label}>
+                  <dt>{group.label}</dt>
+                  <dd>{group.items}</dd>
                 </div>
-                <span>2025 to 2027</span>
-              </article>
-              <article>
-                <div>
-                  <p>Microsoft / LinkedIn</p>
-                  <h3>Career Essentials in System Administration</h3>
-                </div>
+              ))}
+            </dl>
+
+            <div className="credentials" aria-labelledby="credentials-heading">
+              <h3 id="credentials-heading">Credentials</h3>
+              <div className="credential-row">
+                <p>Fortinet Network Security Expert Level 3: Certified Associate</p>
+                <span>2025–2027</span>
+              </div>
+              <div className="credential-row">
+                <p>Career Essentials in System Administration</p>
                 <span>Issued 2025</span>
-              </article>
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="contact" id="contact">
+        <section className="contact" id="contact" aria-labelledby="contact-heading">
           <div className="container contact-inner">
-            <p className="section-label">Contact</p>
-            <h2>Contact.</h2>
-            <p>
-              I am interested in automation, enterprise applications, platform
-              operations, and infrastructure-aware systems roles.
-            </p>
-            <div className="contact-links">
+            <div>
+              <p className="section-index">04 / Contact</p>
+              <h2 id="contact-heading">Contact</h2>
+            </div>
+            <div className="contact-details">
               <a href="mailto:caroline360@gmail.com">caroline360@gmail.com</a>
               <a
                 href="https://www.linkedin.com/in/caroline-mclallen/"
@@ -326,27 +263,26 @@ export default function Home() {
       <footer className="site-footer">
         <div className="container">
           <p>Caroline McLallen</p>
-          <p>Systems analysis · automation · enterprise applications</p>
+          <p>Automation · Systems integration · Enterprise applications</p>
         </div>
       </footer>
     </main>
   );
 }
 
-function SectionHeading({
-  label,
+function SectionHeader({
+  index,
   title,
-  copy,
+  id,
 }: {
-  label: string;
+  index: string;
   title: string;
-  copy: string;
+  id: string;
 }) {
   return (
-    <div className="section-heading">
-      <p className="section-label">{label}</p>
-      <h2>{title}</h2>
-      <p>{copy}</p>
+    <div className="section-header">
+      <p className="section-index">{index}</p>
+      <h2 id={id}>{title}</h2>
     </div>
   );
 }
