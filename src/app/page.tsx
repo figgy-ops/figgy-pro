@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 const projects = [
   {
     index: "01",
@@ -183,6 +186,82 @@ export default function Home() {
                   </div>
                 </article>
               ))}
+            </div>
+
+            <div className="interface-samples" aria-labelledby="samples-heading">
+              <div className="samples-heading">
+                <p className="section-index">UI samples</p>
+                <div>
+                  <h3 id="samples-heading">Sanitized interface demos</h3>
+                  <p>
+                    Working recreations of client-facing projects. Names, contact
+                    information, storefront identifiers, and client branding have
+                    been replaced.
+                  </p>
+                </div>
+              </div>
+
+              <div className="sample-grid">
+                <article className="sample-card">
+                  <Link className="sample-image" href="/demos/intern-launchpad">
+                    <Image
+                      src="/demos/intern-launchpad-preview.jpg"
+                      alt="Preview of a sanitized SPFx intern program workspace"
+                      fill
+                      sizes="(max-width: 760px) 100vw, 33vw"
+                    />
+                  </Link>
+                  <div className="sample-copy">
+                    <div>
+                      <p>SPFx · React · TypeScript · Power Automate · WCAG 2.2</p>
+                      <h4>Intern program workspace</h4>
+                    </div>
+                    <Link href="/demos/intern-launchpad">
+                      Open interactive demo <span aria-hidden="true">→</span>
+                    </Link>
+                  </div>
+                </article>
+
+                <article className="sample-card">
+                  <Link className="sample-image" href="/demos/legal-services">
+                    <Image
+                      src="/demos/legal-services-preview.jpg"
+                      alt="Preview of a sanitized legal services website interface"
+                      fill
+                      sizes="(max-width: 760px) 100vw, 33vw"
+                    />
+                  </Link>
+                  <div className="sample-copy">
+                    <div>
+                      <p>Next.js · React · WCAG 2.1</p>
+                      <h4>Legal services interface</h4>
+                    </div>
+                    <Link href="/demos/legal-services">
+                      Open interactive demo <span aria-hidden="true">→</span>
+                    </Link>
+                  </div>
+                </article>
+
+                <article className="sample-card">
+                  <Link className="sample-image" href="/demos/product-catalog">
+                    <Image
+                      src="/demos/product-catalog-preview.jpg"
+                      alt="Preview of a sanitized multi-source product inventory interface"
+                      fill
+                      sizes="(max-width: 760px) 100vw, 33vw"
+                    />
+                  </Link>
+                  <div className="sample-copy">
+                    <div>
+                      <p>React · Source adapters · Accessible UI</p>
+                      <h4>Multi-source product inventory</h4>
+                    </div>
+                    <Link href="/demos/product-catalog">
+                      Open interactive demo <span aria-hidden="true">→</span>
+                    </Link>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
         </section>

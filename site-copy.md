@@ -51,6 +51,14 @@ Developed React and Next.js interfaces, including a production site for a privat
 
 **Stack:** Next.js · React · TypeScript · WCAG
 
+### Sanitized interface demos
+
+Working recreations of client-facing projects. Names, contact information, storefront identifiers, and client branding have been replaced.
+
+- **Intern program workspace:** SPFx · React · TypeScript · Power Automate · WCAG 2.2
+- **Legal services interface:** Next.js · React · WCAG 2.1
+- **Multi-source product inventory:** React · Source adapters · Accessible UI
+
 ## Experience
 
 ### Systems Analyst / Automation Specialist
