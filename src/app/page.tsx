@@ -52,7 +52,7 @@ const technicalGroups = [
   },
   {
     label: "Engineering",
-    items: "TypeScript, React, Next.js, Git, accessible interfaces, systems integration",
+    items: "TypeScript, React, Next.js, Git, systems integration, WCAG 2.1/2.2, semantic HTML",
   },
   {
     label: "Operations",
@@ -137,8 +137,8 @@ export default function Home() {
               Builds and supports automation, integrations, enterprise applications,
               and internal platforms in a distributed public-sector environment.
               Current work spans Power Platform, SharePoint/SPFx, PowerShell/PnP,
-              React/Next.js, identity, governance, reporting, and infrastructure-aware
-              operations.
+              React/Next.js, identity, governance, accessibility, reporting, and
+              infrastructure-aware operations.
             </p>
 
             <dl className="profile-grid">
