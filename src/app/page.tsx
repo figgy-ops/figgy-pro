@@ -115,7 +115,7 @@ export default function Home() {
           <div className="container hero-grid">
             <div className="hero-copy">
               <p className="eyebrow">Automation Specialist / Systems Analyst</p>
-              <h1>I turn operational friction into reliable systems.</h1>
+              <h1>Automation, integrations, and enterprise applications.</h1>
               <p className="hero-intro">
                 I design and build automations, integrations, internal tools, and
                 enterprise platforms. My work spans Power Platform, SharePoint,
@@ -138,21 +138,21 @@ export default function Home() {
                 <p>Current role</p>
                 <span>Texas public sector</span>
               </div>
-              <h2>Systems Analyst</h2>
-              <p className="role-subtitle">Working title: Automation Specialist</p>
+              <h2>Current scope</h2>
+              <p className="role-subtitle">Automation Specialist / Systems Analyst</p>
 
               <ol className="work-flow" aria-label="How I approach systems work">
                 <li>
                   <span>01</span>
-                  <p>Find the manual work, failure point, or missing connection.</p>
+                  <p>Automation and systems integration.</p>
                 </li>
                 <li>
                   <span>02</span>
-                  <p>Map the systems, owners, risks, and real operating constraints.</p>
+                  <p>Enterprise applications and modernization.</p>
                 </li>
                 <li>
                   <span>03</span>
-                  <p>Build a reliable solution that can be governed and supported.</p>
+                  <p>Governance, reporting, and operational support.</p>
                 </li>
               </ol>
             </aside>
@@ -172,8 +172,8 @@ export default function Home() {
           <div className="container">
             <SectionHeading
               label="Selected work"
-              title="Systems work that solves a real operating problem."
-              copy="The common thread is not one vendor or platform. It is taking work that is fragmented, manual, difficult to govern, or hard to use and making it function better."
+              title="Selected projects and operational work."
+              copy="Work across internal applications, process automation, SharePoint governance, and accessible web development."
             />
 
             <div className="project-list">
@@ -202,8 +202,8 @@ export default function Home() {
           <div className="container">
             <SectionHeading
               label="Capabilities"
-              title="Broad enough to connect the system. Grounded enough to run it."
-              copy="I work across the application, automation, governance, and infrastructure layers without pretending they are the same discipline."
+              title="Technical capabilities."
+              copy="Experience across applications, automation, governance, infrastructure, and systems analysis."
             />
 
             <div className="capability-grid">
@@ -222,8 +222,8 @@ export default function Home() {
           <div className="container experience-layout">
             <SectionHeading
               label="Experience"
-              title="Engineering-minded work, built on operational reality."
-              copy="I came up through hands-on support and platform administration. That background still matters: I know the difference between a clever build and a system people can actually operate."
+              title="Current and previous roles."
+              copy="My background includes automation, platform administration, technical support, web development, and infrastructure work."
             />
 
             <div className="timeline">
@@ -272,7 +272,7 @@ export default function Home() {
           <div className="container credential-grid">
             <div>
               <p className="section-label">Credentials</p>
-              <h2>Formal learning that follows the work.</h2>
+              <h2>Certifications and training.</h2>
             </div>
 
             <div className="credential-list">
@@ -297,10 +297,10 @@ export default function Home() {
         <section className="contact" id="contact">
           <div className="container contact-inner">
             <p className="section-label">Contact</p>
-            <h2>Interested in systems that need more than a patch.</h2>
+            <h2>Contact.</h2>
             <p>
-              I am most useful where automation, enterprise applications,
-              governance, and infrastructure need to work as one operating system.
+              I am interested in automation, enterprise applications, platform
+              operations, and infrastructure-aware systems roles.
             </p>
             <div className="contact-links">
               <a href="mailto:caroline360@gmail.com">caroline360@gmail.com</a>
