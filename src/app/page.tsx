@@ -146,10 +146,6 @@ export default function Home() {
 
             <dl className="profile-grid">
               <div>
-                <dt>Organization</dt>
-                <dd>Texas Historical Commission</dd>
-              </div>
-              <div>
                 <dt>Primary scope</dt>
                 <dd>Automation, applications, platform support</dd>
               </div>
