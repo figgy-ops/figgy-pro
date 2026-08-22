@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-body",
-});
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-display",
-});
-
 export const metadata: Metadata = {
-  title: "Caroline McLallen | Infastructure & M365",
+  title: "Caroline McLallen | Automation Specialist & Systems Analyst",
   description:
-    "Professional portfolio for Friggy, a systems engineer and SharePoint developer focused on Microsoft 365, infrastructure, automation, and enterprise platform design.",
+    "Portfolio of Caroline McLallen, an Automation Specialist and Systems Analyst working across automation, integrations, enterprise applications, SharePoint, web engineering, governance, and infrastructure.",
+  openGraph: {
+    title: "Caroline McLallen | Automation Specialist & Systems Analyst",
+    description:
+      "Automation, integrations, enterprise applications, governance, and infrastructure-aware systems work.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Caroline McLallen | Automation Specialist & Systems Analyst",
+    description:
+      "Automation, integrations, enterprise applications, governance, and infrastructure-aware systems work.",
+  },
 };
 
 export default function RootLayout({
@@ -25,9 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${manrope.variable}`}>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
