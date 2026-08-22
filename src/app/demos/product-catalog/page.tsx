@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import ProductCatalogDemo from "./ProductCatalogDemo";
 
 export const metadata: Metadata = {
-  title: "Sanitized Product Inventory UI Demo | Caroline McLallen",
-  description:
-    "A sanitized interactive interface sample for a multi-source product inventory.",
+  title: "Product Catalog UI Sample",
+  description: "Generic product catalog interface with example records.",
   robots: { index: false, follow: false },
 };
 

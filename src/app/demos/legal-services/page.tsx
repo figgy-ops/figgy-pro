@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import LegalServicesDemo from "./LegalServicesDemo";
 
 export const metadata: Metadata = {
-  title: "Sanitized Legal Services UI Demo | Caroline McLallen",
-  description:
-    "A sanitized interactive interface sample based on a legal services website project.",
+  title: "Legal Services UI Sample",
+  description: "Generic legal services interface with example content.",
   robots: { index: false, follow: false },
 };
 

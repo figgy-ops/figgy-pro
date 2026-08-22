@@ -2,20 +2,20 @@
 
 **Automation Specialist / Systems Analyst**
 
-Builds and supports automation, integrations, enterprise applications, and internal platforms in a distributed public-sector environment. Current work spans Power Platform, SharePoint/SPFx, PowerShell/PnP, React/Next.js, identity, governance, accessibility, reporting, and infrastructure-aware operations.
+Builds and supports automation, integrations, enterprise applications, and internal platforms in a distributed public-sector environment. Current work spans Power Platform, SharePoint/SPFx, PowerShell/PnP, Python, React/Next.js, identity, governance, accessibility, reporting, and network and endpoint support.
 
 - **Organization:** Texas Historical Commission
-- **Primary scope:** Automation, integration, modernization
+- **Primary scope:** Automation, applications, platform support
 - **Environment:** 40+ sites · 500+ SharePoint sites · 300+ users
-- **Core tools:** Power Automate · PowerShell · TypeScript · React · SPFx
+- **Core tools:** Power Automate · PowerShell · Python · TypeScript · SPFx
 
 ## Selected systems work
 
-### Intern LaunchPad
+### Program operations workspace
 
-**Context:** Internal application
+**Context:** Internal web application
 
-Employee-facing program hub for intern information, supervisor resources, and weekly time reporting.
+Internal hub for schedules, resources, contacts, team files, and recurring submissions.
 
 Built the SPFx interface in React and TypeScript; connected Microsoft Forms and Power Automate; implemented keyboard and screen-reader support.
 
@@ -23,9 +23,9 @@ Built the SPFx interface in React and TypeScript; connected Microsoft Forms and 
 
 ### Enterprise intranet and governance
 
-**Context:** Platform modernization
+**Context:** Platform administration
 
-Intranet rebuild and operating model for an agency SharePoint environment with more than 500 sites.
+Rebuilt the intranet for an agency SharePoint environment with more than 500 sites.
 
 Restructured navigation and information architecture; standardized ownership and permissions; built reusable provisioning and PnP PowerShell reporting.
 
@@ -33,7 +33,7 @@ Restructured navigation and information architecture; standardized ownership and
 
 ### Operational automation
 
-**Context:** Process engineering
+**Context:** Workflow automation
 
 Workflows for onboarding, approvals, reporting, provisioning, access reviews, and recurring administrative work.
 
@@ -43,21 +43,21 @@ Mapped business rules and dependencies, connected source systems, built the auto
 
 ### Accessible web platforms
 
-**Context:** Web engineering
+**Context:** Web development
 
 Responsive public and internal websites with maintainable content structure and accessible interactions.
 
-Developed React and Next.js interfaces, including a production site for a private law firm, with WCAG requirements treated as implementation constraints.
+Developed React and Next.js interfaces, including a production site for a private law firm, with WCAG requirements built into the implementation.
 
 **Stack:** Next.js · React · TypeScript · WCAG
 
-### Sanitized interface demos
+### Interface samples
 
-Working recreations of client-facing projects. Names, contact information, storefront identifiers, and client branding have been replaced.
+UI samples based on completed work. Client names, branding, images, and identifying content are not included.
 
-- **Intern program workspace:** SPFx · React · TypeScript · Power Automate · WCAG 2.2
+- **Program workspace:** SPFx · React · TypeScript · Power Automate · WCAG 2.2
 - **Legal services interface:** Next.js · React · WCAG 2.1
-- **Multi-source product inventory:** React · Source adapters · Accessible UI
+- **Product catalog:** React · Data imports · Accessible UI
 
 ## Experience
 
@@ -81,35 +81,35 @@ Technology operations, user and endpoint support, Microsoft cloud administration
 
 ## Technical profile
 
-- **Automation:** Power Automate, PowerShell, PnP, REST APIs, approvals, provisioning, reporting
-- **Applications:** SharePoint Online, SPFx, Microsoft 365, Forms, internal tools, information architecture
-- **Engineering:** TypeScript, React, Next.js, Git, systems integration, WCAG 2.1/2.2, semantic HTML
-- **Operations:** Entra ID, permissions, Intune, Cisco switching, Fortinet, VPN, DNS, DHCP
+- **Automation:** Power Automate, PowerShell, Python, PnP PowerShell, REST APIs, Forms
+- **Applications:** SharePoint Online, SPFx, Microsoft 365, Entra ID, Intune, information architecture
+- **Development:** TypeScript, JavaScript, React, Next.js, HTML/CSS, Git
+- **Operations:** Cisco switching, Fortinet, VPN, VLANs, DNS, DHCP, endpoint support
 
 ### Credentials
 
 - Fortinet Network Security Expert Level 3: Certified Associate, 2025–2027
 - Career Essentials in System Administration, issued 2025
 
-## Accessibility engineering
+## Accessibility implementation
 
-Applies WCAG 2.1/2.2 and Section 508 requirements during component design, implementation, and review across internal applications, SharePoint experiences, and public websites.
+Builds WCAG 2.1/2.2 and Section 508 requirements into internal applications, SharePoint components, and public websites.
 
 - **Structure:** Semantic HTML, useful heading and list structure, accessible names, and ARIA when native controls are not sufficient.
 - **Interaction:** Keyboard operation, visible focus, logical tab order, modal focus management, and clear form labels and errors.
 - **Verification:** Screen-reader checks, contrast review, zoom and responsive reflow, and testing against defined acceptance criteria.
-- **Applied work:** Intern LaunchPad, SPFx components, intranet navigation and content, and responsive public websites.
+- **Applied work:** SPFx components, internal program tools, intranet navigation, and responsive public websites.
 
-## Network-aware automation
+## Networking in automation
 
-Hands-on operational experience with Cisco switching, Fortinet firewalls, VPNs, VLANs, DHCP, DNS, site connectivity, and incident response across more than 40 distributed locations.
+Works directly with Cisco switching, Fortinet firewalls, VPNs, VLANs, DHCP, DNS, site connectivity, and incident response across more than 40 locations.
 
-The depth is operational and troubleshooting-focused; core network architecture remains owned by the network team.
+This is operational and troubleshooting work. The network team owns core architecture.
 
-- **Failure domains:** Separates application, API, identity, DNS, VPN, firewall, and site-connectivity issues before changing an automation.
-- **Dependency design:** Accounts for authentication, permissions, segmentation, routing, and remote-site constraints when connecting systems.
-- **Automation opportunities:** Provides the context needed to automate inventory, validation, reporting, monitoring, and repeatable changes safely.
-- **Operational value:** Produces automations that are easier to diagnose because network and infrastructure dependencies are documented up front.
+- **Before changes:** Checks whether a failure is in the application, API, identity, DNS, VPN, firewall, or site connection before changing a workflow.
+- **Access and routing:** Accounts for authentication, permissions, VLANs, routing, and remote-site limits when connecting systems.
+- **What to automate:** Inventory, validation, reporting, monitoring, and repeatable administrative changes are good candidates for automation.
+- **Support:** Documents network and infrastructure dependencies so failures can be traced and handed to the correct team.
 
 ## Contact
 

@@ -2,34 +2,34 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import styles from "./intern-launchpad.module.css";
+import styles from "./program-workspace.module.css";
 
-type InternProfile = {
+type ParticipantProfile = {
   initials: string;
   name: string;
-  division: string;
-  supervisor: string;
-  project: string;
+  team: string;
+  manager: string;
+  assignment: string;
   bio: string;
 };
 
 const primaryCards = [
   {
     label: "Program",
-    title: "FY26 Schedule",
-    text: "Review program dates, weekly milestones, and required events.",
+    title: "Program calendar",
+    text: "Review dates, milestones, and required sessions.",
     button: "View schedule",
   },
   {
     label: "Resources",
-    title: "Agency Hub and resource center",
-    text: "Open common administrative and workplace references.",
+    title: "Resource center",
+    text: "Open common forms, policies, and workplace references.",
     button: "Open resources",
   },
   {
     label: "Directory",
-    title: "Address Book",
-    text: "Find program contacts, supervisors, and participant information.",
+    title: "Program directory",
+    text: "Find team contacts and participant information.",
     button: "View directory",
   },
   {
@@ -40,72 +40,72 @@ const primaryCards = [
   },
 ];
 
-const divisions = ["Archeology", "Architecture", "Cemeteries", "Finance"];
+const teams = ["Operations", "Programs", "Services", "Technology"];
 
-const people: InternProfile[] = [
+const people: ParticipantProfile[] = [
   {
-    initials: "ML",
-    name: "Morgan Lee",
-    division: "Archeology",
-    supervisor: "Division supervisor",
-    project: "Collections research and records review",
-    bio: "Supports research, documentation, and structured content for the summer program.",
+    initials: "01",
+    name: "Participant 01",
+    team: "Operations",
+    manager: "Team lead",
+    assignment: "Resource review",
+    bio: "Sample profile for a short-term internal program participant.",
   },
   {
-    initials: "JR",
-    name: "Jordan Reed",
-    division: "Architecture",
-    supervisor: "Program architect",
-    project: "Survey documentation and resource organization",
-    bio: "Works with field records, reference material, and preservation documentation.",
+    initials: "02",
+    name: "Participant 02",
+    team: "Programs",
+    manager: "Team lead",
+    assignment: "Content review",
+    bio: "Sample profile for a short-term internal program participant.",
   },
   {
-    initials: "CP",
-    name: "Casey Patel",
-    division: "Cemeteries",
-    supervisor: "Program coordinator",
-    project: "Records review and metadata cleanup",
-    bio: "Assists with structured records, quality review, and internal documentation.",
+    initials: "03",
+    name: "Participant 03",
+    team: "Services",
+    manager: "Program lead",
+    assignment: "Records check",
+    bio: "Sample profile for a short-term internal program participant.",
   },
   {
-    initials: "TB",
-    name: "Taylor Brooks",
-    division: "Finance",
-    supervisor: "Operations manager",
-    project: "Process mapping and reporting support",
-    bio: "Documents program workflows and supports recurring operational reporting.",
+    initials: "04",
+    name: "Participant 04",
+    team: "Technology",
+    manager: "Team lead",
+    assignment: "Process notes",
+    bio: "Sample profile for a short-term internal program participant.",
   },
   {
-    initials: "RC",
-    name: "Riley Chen",
-    division: "Architecture",
-    supervisor: "Division supervisor",
-    project: "Reference library and content review",
-    bio: "Organizes internal resources and reviews content for clarity and accessibility.",
+    initials: "05",
+    name: "Participant 05",
+    team: "Programs",
+    manager: "Team lead",
+    assignment: "Reference update",
+    bio: "Sample profile for a short-term internal program participant.",
   },
   {
-    initials: "AD",
-    name: "Avery Davis",
-    division: "Archeology",
-    supervisor: "Program specialist",
-    project: "Research workflow documentation",
-    bio: "Maps research steps and prepares reusable documentation for the program team.",
+    initials: "06",
+    name: "Participant 06",
+    team: "Operations",
+    manager: "Program lead",
+    assignment: "Workflow notes",
+    bio: "Sample profile for a short-term internal program participant.",
   },
   {
-    initials: "SK",
-    name: "Sam Kim",
-    division: "Cemeteries",
-    supervisor: "Division coordinator",
-    project: "Digital records quality review",
-    bio: "Reviews records for completeness and supports accessible digital documentation.",
+    initials: "07",
+    name: "Participant 07",
+    team: "Services",
+    manager: "Team lead",
+    assignment: "Quality check",
+    bio: "Sample profile for a short-term internal program participant.",
   },
   {
-    initials: "NP",
-    name: "Noah Perez",
-    division: "Finance",
-    supervisor: "Operations analyst",
-    project: "Weekly reporting and process support",
-    bio: "Supports structured reporting and documents recurring administrative processes.",
+    initials: "08",
+    name: "Participant 08",
+    team: "Technology",
+    manager: "Team lead",
+    assignment: "Status reporting",
+    bio: "Sample profile for a short-term internal program participant.",
   },
 ];
 
@@ -113,12 +113,12 @@ const quickGuideCards = [
   {
     label: "First",
     title: "Review your schedule",
-    text: "Confirm program dates, weekly requirements, and planned events.",
+    text: "Confirm key dates, weekly requirements, and planned sessions.",
   },
   {
     label: "Next",
-    title: "Find your division",
-    text: "Use the division library for role-specific resources and references.",
+    title: "Find your team",
+    text: "Use the team library for role-specific resources and references.",
   },
   {
     label: "Always",
@@ -143,8 +143,8 @@ const supportCards = [
 const focusableSelector =
   "button:not([disabled]), a[href], [tabindex]:not([tabindex='-1'])";
 
-export default function InternLaunchpadDemo() {
-  const [selectedPerson, setSelectedPerson] = useState<InternProfile | null>(null);
+export default function ProgramWorkspaceDemo() {
+  const [selectedPerson, setSelectedPerson] = useState<ParticipantProfile | null>(null);
   const [demoNotice, setDemoNotice] = useState("");
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
@@ -188,33 +188,33 @@ export default function InternLaunchpadDemo() {
     };
   }, [selectedPerson]);
 
-  const showSanitizedNotice = (resource: string) => {
-    setDemoNotice(`${resource} is not connected in this sanitized interface demo.`);
+  const showSampleNotice = (resource: string) => {
+    setDemoNotice(`${resource} is not connected in this UI sample.`);
   };
 
-  const openProfile = (person: InternProfile, trigger: HTMLButtonElement) => {
+  const openProfile = (person: ParticipantProfile, trigger: HTMLButtonElement) => {
     lastTriggerRef.current = trigger;
     setSelectedPerson(person);
   };
 
   return (
-    <section className={styles.internHub}>
+    <section className={styles.workspace}>
       <a className={styles.skipLink} href="#main-content">
         Skip to content
       </a>
 
       <header className={styles.hero}>
         <div className={styles.demoUtility}>
-          <span>Sanitized SPFx interface sample</span>
+          <span>Portfolio UI sample · Example content</span>
           <Link href="/#work">Back to portfolio</Link>
         </div>
         <div className={styles.heroShade}>
           <div className={styles.heroContent}>
-            <p className={styles.agency}>Public service internship program</p>
-            <h1>Intern LaunchPad</h1>
+            <p className={styles.contextLabel}>Internal program workspace</p>
+            <h1>Program Workspace</h1>
             <p className={styles.tagline}>
-              A central starting point for schedules, resources, contacts,
-              division links, and intern profiles.
+              Schedules, reference material, contacts, team links, and
+              participant profiles in one place.
             </p>
           </div>
         </div>
@@ -224,11 +224,11 @@ export default function InternLaunchpadDemo() {
         <section className={styles.intro}>
           <div>
             <p className={styles.kicker}>Welcome</p>
-            <h2>Start here for the FY26 internship program.</h2>
+            <h2>Start here for program information.</h2>
           </div>
           <p>
             Use this workspace to find the program information, contacts, and
-            resources needed throughout the summer.
+            resources used throughout the program.
           </p>
         </section>
 
@@ -238,7 +238,7 @@ export default function InternLaunchpadDemo() {
               <p className={styles.cardLabel}>{card.label}</p>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
-              <button type="button" onClick={() => showSanitizedNotice(card.title)}>
+              <button type="button" onClick={() => showSampleNotice(card.title)}>
                 {card.button}
               </button>
             </article>
@@ -247,75 +247,75 @@ export default function InternLaunchpadDemo() {
 
         <p className={styles.demoNotice} aria-live="polite">{demoNotice}</p>
 
-        <section className={styles.supervisorBand}>
-          <div className={styles.supervisorCopy}>
-            <p className={styles.kicker}>Supervisor access</p>
-            <h2>Weekly time and supervisor materials</h2>
+        <section className={styles.managerBand}>
+          <div className={styles.managerCopy}>
+            <p className={styles.kicker}>Manager tools</p>
+            <h2>Weekly forms and manager resources</h2>
             <p>
-              Open the weekly time form and supporting references used by supervisors.
+              Open recurring forms and supporting references used by managers.
             </p>
           </div>
-          <button type="button" onClick={() => showSanitizedNotice("Supervisor access")}>
-            Open supervisor resources
+          <button type="button" onClick={() => showSampleNotice("Manager tools")}>
+            Open manager resources
           </button>
         </section>
 
-        <section className={styles.divisionSection}>
-          <div className={styles.divisionHeader}>
-            <p className={styles.kicker}>Division libraries</p>
-            <h2>Find your division resources.</h2>
+        <section className={styles.teamSection}>
+          <div className={styles.teamHeader}>
+            <p className={styles.kicker}>Team libraries</p>
+            <h2>Find your team resources.</h2>
             <p>
               Open the document library for your program area to find team-specific files.
             </p>
           </div>
 
-          <div className={styles.divisionButtonGrid} aria-label="Division document libraries">
-            {divisions.map((division) => (
+          <div className={styles.teamButtonGrid} aria-label="Team document libraries">
+            {teams.map((team) => (
               <button
                 type="button"
-                key={division}
-                onClick={() => showSanitizedNotice(`${division} library`)}
+                key={team}
+                onClick={() => showSampleNotice(`${team} library`)}
               >
-                {division}
+                {team}
               </button>
             ))}
           </div>
         </section>
 
-        <section className={styles.headshotSection}>
-          <div className={styles.headshotHeader}>
-            <p className={styles.kicker}>Intern profiles</p>
-            <h2>Meet the interns.</h2>
+        <section className={styles.profileSection}>
+          <div className={styles.profileHeader}>
+            <p className={styles.kicker}>Participant profiles</p>
+            <h2>Program participants</h2>
             <p>
-              Select a profile to view the participant&apos;s division, project,
-              supervisor, and program biography.
+              Select a profile to view the participant&apos;s team, assignment,
+              manager, and sample biography.
             </p>
           </div>
 
-          <div className={styles.headshotGrid} aria-label="Intern profiles">
+          <div className={styles.profileGrid} aria-label="Participant profiles">
             {people.map((person) => (
-              <article className={styles.headshotCard} key={person.name}>
+              <article className={styles.profileCard} key={person.name}>
                 <button
                   type="button"
-                  className={styles.headshotImageButton}
+                  className={styles.profileImageButton}
                   onClick={(event) => openProfile(person, event.currentTarget)}
                   aria-label={`View profile for ${person.name}`}
                 >
-                  <span className={styles.headshotImageWrap}>
-                    <span className={styles.headshotPlaceholder} aria-hidden="true">
+                  <span className={styles.profileImageWrap}>
+                    <span className={styles.profilePlaceholder} aria-hidden="true">
                       {person.initials}
                     </span>
                   </span>
                 </button>
 
-                <div className={styles.headshotContent}>
+                <div className={styles.profileContent}>
                   <h3>{person.name}</h3>
                   <dl className={styles.compactMeta}>
-                    <div><dt>Division</dt><dd>{person.division}</dd></div>
-                    <div><dt>Project</dt><dd>{person.project}</dd></div>
+                    <div><dt>Team</dt><dd>{person.team}</dd></div>
+                    <div><dt>Assignment</dt><dd>{person.assignment}</dd></div>
                   </dl>
-                  <button type="button" onClick={() => showSanitizedNotice(`${person.name} contact`)}>
-                    Contact
+                  <button type="button" onClick={() => showSampleNotice(`${person.name} resources`)}>
+                    View resources
                   </button>
                 </div>
               </article>
@@ -347,7 +347,7 @@ export default function InternLaunchpadDemo() {
                 <h3>{card.title}</h3>
                 <p>{card.text}</p>
               </div>
-              <button type="button" onClick={() => showSanitizedNotice(card.title)}>
+              <button type="button" onClick={() => showSampleNotice(card.title)}>
                 {card.button}
               </button>
             </article>
@@ -376,20 +376,20 @@ export default function InternLaunchpadDemo() {
               ×
             </button>
             <div className={styles.profileModalImageWrap} aria-hidden="true">
-              <span className={styles.headshotPlaceholder}>{selectedPerson.initials}</span>
+              <span className={styles.profilePlaceholder}>{selectedPerson.initials}</span>
             </div>
             <div className={styles.profileModalContent}>
-              <p className={styles.cardLabel}>Intern Profile</p>
+              <p className={styles.cardLabel}>Participant profile</p>
               <h2 id="profile-title">{selectedPerson.name}</h2>
               <p className={styles.profileModalBio}>{selectedPerson.bio}</p>
               <dl className={styles.profileModalMeta}>
-                <div><dt>Division</dt><dd>{selectedPerson.division}</dd></div>
-                <div><dt>Supervisor</dt><dd>{selectedPerson.supervisor}</dd></div>
-                <div><dt>Project</dt><dd>{selectedPerson.project}</dd></div>
-                <div><dt>Contact</dt><dd>Omitted from sanitized demo</dd></div>
+                <div><dt>Team</dt><dd>{selectedPerson.team}</dd></div>
+                <div><dt>Manager</dt><dd>{selectedPerson.manager}</dd></div>
+                <div><dt>Assignment</dt><dd>{selectedPerson.assignment}</dd></div>
+                <div><dt>Contact</dt><dd>Not included in sample</dd></div>
               </dl>
-              <button type="button" onClick={() => showSanitizedNotice(`${selectedPerson.name} contact`)}>
-                Contact
+              <button type="button" onClick={() => showSampleNotice(`${selectedPerson.name} resources`)}>
+                View resources
               </button>
             </div>
           </div>

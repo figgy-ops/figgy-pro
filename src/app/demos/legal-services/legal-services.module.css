@@ -178,7 +178,7 @@
 }
 
 .hero .eyebrow,
-.supreme .sectionKicker {
+.highlight .sectionKicker {
   color: var(--brass-light);
 }
 
@@ -433,19 +433,19 @@
   font-size: 1.03rem;
 }
 
-.supreme {
+.highlight {
   max-width: none;
   padding-inline: max(24px, calc((100vw - 1248px) / 2));
   background: var(--burgundy-dark);
   color: var(--cream);
 }
 
-.supreme h2 {
+.highlight h2 {
   max-width: 950px;
   color: var(--cream);
 }
 
-.supreme > p:last-child {
+.highlight > p:last-child {
   max-width: 980px;
   margin-bottom: 0;
   color: #e4d5c2;

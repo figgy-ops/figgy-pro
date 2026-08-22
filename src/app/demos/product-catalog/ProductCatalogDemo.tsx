@@ -7,44 +7,44 @@ import styles from "./product-catalog.module.css";
 
 const products = [
   {
-    name: "Studio Cooking Pot",
-    category: "Cookware",
-    price: "$64",
-    image: "/demos/catalog/studio-pot.jpg",
-    alt: "Unglazed clay cooking pot with a fitted lid",
-    tag: "Hand-finished clay",
-    source: "Source A",
+    name: "Desk Lamp",
+    category: "Lighting",
+    price: "$96",
+    image: "/demos/catalog/desk-lamp.jpg",
+    alt: "Minimal brass desk lamp on a warm gray background",
+    tag: "Aged brass",
+    source: "Feed 01",
   },
   {
-    name: "Stone Vessel",
-    category: "Home decor",
-    price: "$58",
-    image: "/demos/catalog/stone-vessel.jpg",
-    alt: "Neutral stone-colored vessel on a plain background",
-    tag: "Wheel thrown",
-    source: "Source B",
+    name: "Desk Tray",
+    category: "Desk",
+    price: "$42",
+    image: "/demos/catalog/desk-tray.jpg",
+    alt: "Rectangular walnut desk tray on a warm gray background",
+    tag: "Walnut",
+    source: "Feed 02",
   },
   {
-    name: "Natural Fiber Fill",
-    category: "Natural fibers",
-    price: "$22",
-    image: "/demos/catalog/natural-fiber.jpg",
-    alt: "Loose natural cotton fiber on a warm white background",
-    tag: "Natural cotton",
-    source: "Source A",
+    name: "Paper Notebook",
+    category: "Stationery",
+    price: "$18",
+    image: "/demos/catalog/paper-notebook.jpg",
+    alt: "Plain recycled-paper notebook with a charcoal spine",
+    tag: "Recycled paper",
+    source: "Feed 01",
   },
   {
-    name: "Clay Luminary",
-    category: "Home decor",
-    price: "$71",
-    image: "/demos/catalog/clay-light.jpg",
-    alt: "Handmade clay luminary with carved openings",
-    tag: "Hand carved",
-    source: "Source B",
+    name: "Canvas Utility Pouch",
+    category: "Accessories",
+    price: "$28",
+    image: "/demos/catalog/canvas-pouch.jpg",
+    alt: "Muted rust canvas utility pouch on a warm gray background",
+    tag: "Woven canvas",
+    source: "Feed 02",
   },
 ];
 
-const categories = ["All", "Cookware", "Natural fibers", "Home decor"];
+const categories = ["All", "Lighting", "Desk", "Stationery", "Accessories"];
 const focusableSelector =
   "button:not([disabled]), a[href], [tabindex]:not([tabindex='-1'])";
 
@@ -102,14 +102,14 @@ export default function ProductCatalogDemo() {
       <a className={styles.skipLink} href="#collection">Skip to products</a>
 
       <div className={styles.demoBar}>
-        <span>Sanitized interface sample</span>
+        <span>Portfolio UI sample · Example records</span>
         <Link href="/#work">Back to portfolio</Link>
       </div>
 
       <header className={styles.siteHeader}>
-        <a className={styles.wordmark} href="#top" aria-label="Fieldwork Studio demo home">
-          <span className={styles.wordmarkMark} aria-hidden="true">FS</span>
-          <span>Fieldwork Studio</span>
+        <a className={styles.wordmark} href="#top" aria-label="Catalog Sample home">
+          <span className={styles.wordmarkMark} aria-hidden="true">CS</span>
+          <span>Catalog Sample</span>
         </a>
         <nav aria-label="Demo navigation">
           <a href="#collection">Products</a>
@@ -123,11 +123,10 @@ export default function ProductCatalogDemo() {
 
       <section className={styles.hero} id="top">
         <div className={styles.heroCopy}>
-          <p className={styles.eyebrow}>Independent catalog · Source A + Source B</p>
-          <h1>Goods from independent makers.</h1>
+          <p className={styles.eyebrow}>Sample catalog · Feed 01 + Feed 02</p>
+          <h1>Products from multiple data feeds.</h1>
           <p className={styles.heroIntro}>
-            Pottery, natural fibers, and home goods normalized from separate
-            storefront sources into one accessible catalog.
+            Example records displayed in one consistent, accessible catalog.
           </p>
           <div className={styles.heroActions}>
             <a className={`${styles.button} ${styles.buttonPrimary}`} href="#collection">
@@ -140,25 +139,25 @@ export default function ProductCatalogDemo() {
               onClick={() => setNotesOpen(true)}
             >
               <span className={styles.play} aria-hidden="true">i</span>
-              Interface notes
+              Import details
             </button>
           </div>
           <div className={styles.heroNote}>
             <span>01</span>
-            <p>Records retain their source while names and identifiers are normalized.</p>
+            <p>Each record keeps its feed label while fields use one display format.</p>
           </div>
         </div>
         <div className={styles.heroVisual}>
           <Image
-            src="/demos/catalog/studio-pot.jpg"
-            alt="Unglazed clay cooking pot with a fitted lid"
+            src="/demos/catalog/desk-lamp.jpg"
+            alt="Minimal brass desk lamp on a warm gray background"
             fill
             priority
             sizes="(max-width: 900px) 100vw, 48vw"
           />
           <div className={styles.imageLabel}>
-            <span>Hand-finished clay</span>
-            <strong>Studio Cooking Pot</strong>
+            <span>Aged brass</span>
+            <strong>Desk Lamp</strong>
           </div>
         </div>
       </section>
@@ -170,8 +169,7 @@ export default function ProductCatalogDemo() {
             <h2>Current collection</h2>
           </div>
           <p>
-            Products are displayed in a consistent structure while their source
-            assignment remains visible.
+            Each product uses the same field order while its feed label remains visible.
           </p>
         </div>
 
@@ -219,16 +217,16 @@ export default function ProductCatalogDemo() {
       <section className={`${styles.story} ${styles.section}`} id="shop-info">
         <div className={styles.storyNumber}>02</div>
         <div>
-          <p className={styles.eyebrow}>Catalog sources</p>
-          <h2>Two storefront adapters</h2>
+          <p className={styles.eyebrow}>Data feeds</p>
+          <h2>Two sample imports</h2>
         </div>
-        <div className={styles.shopStats} aria-label="Sanitized catalog status">
-          <div><strong>2</strong><span>Source adapters</span></div>
+        <div className={styles.shopStats} aria-label="Sample catalog status">
+          <div><strong>2</strong><span>Data feeds</span></div>
           <div><strong>4</strong><span>Visible records</span></div>
           <div><strong>0</strong><span>Stale records</span></div>
           <div><strong>Current</strong><span>Sample status</span></div>
           <button className={`${styles.button} ${styles.buttonPrimary}`} type="button" onClick={() => setNotesOpen(true)}>
-            Review integration notes
+            Review import details
           </button>
         </div>
       </section>
@@ -236,18 +234,17 @@ export default function ProductCatalogDemo() {
       <section className={styles.care} id="featured">
         <div className={styles.careImage}>
           <Image
-            src="/demos/catalog/clay-light.jpg"
-            alt="Handmade clay luminary with carved openings"
+            src="/demos/catalog/canvas-pouch.jpg"
+            alt="Muted rust canvas utility pouch on a warm gray background"
             fill
             sizes="(max-width: 800px) 100vw, 48vw"
           />
         </div>
         <div className={styles.careCopy}>
           <p className={styles.eyebrow}>Featured product</p>
-          <h2>Clay Luminary</h2>
+          <h2>Canvas Utility Pouch</h2>
           <p>
-            A product-detail callout preserves the source storefront&apos;s editorial
-            layout without exposing a seller name, marketplace URL, or product listing.
+            A product-detail callout for one static example record.
           </p>
           <a href="#collection">Return to collection <span>→</span></a>
         </div>
@@ -255,8 +252,8 @@ export default function ProductCatalogDemo() {
 
       <footer className={styles.footer}>
         <div>
-          <div className={styles.footerMark}>Fieldwork Studio</div>
-          <p>Sanitized catalog interface for independent product sources.</p>
+          <div className={styles.footerMark}>Catalog Sample</div>
+          <p>Portfolio UI sample with fictional records.</p>
         </div>
         <div>
           <p className={styles.footerTitle}>Explore</p>
@@ -266,12 +263,12 @@ export default function ProductCatalogDemo() {
         </div>
         <div>
           <p className={styles.footerTitle}>Privacy</p>
-          <span>No seller identity</span>
-          <span>No storefront IDs</span>
+          <span>No real seller</span>
+          <span>No marketplace IDs</span>
           <span>No external links</span>
         </div>
         <div className={styles.footerBottom}>
-          <span>Sanitized demonstration</span>
+          <span>Example content</span>
           <span>Interface sample</span>
         </div>
       </footer>
@@ -296,12 +293,11 @@ export default function ProductCatalogDemo() {
             >
               ×
             </button>
-            <p className={styles.eyebrow}>Interface notes</p>
-            <h2 id="notes-title">Multi-source presentation</h2>
+            <p className={styles.eyebrow}>Import details</p>
+            <h2 id="notes-title">Shared product fields</h2>
             <p>
-              The production concept normalized product names, availability, images,
-              prices, and links from separate storefront sources. This portfolio demo
-              uses static, anonymous records and does not connect to a seller account.
+              Four static records show how names, availability, images, prices, and
+              feed labels can be displayed together. No external account is connected.
             </p>
           </div>
         </div>

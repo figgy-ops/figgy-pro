@@ -6,36 +6,36 @@ import styles from "./legal-services.module.css";
 
 const practiceAreas = [
   {
-    title: "Ownership and title disputes",
-    text: "Representation involving ownership history, title defects, and contested conveyances.",
+    title: "Contract review and disputes",
+    text: "Review of agreements, obligations, timelines, and related business records.",
   },
   {
-    title: "Royalty and accounting claims",
-    text: "Disputes involving payments, deductions, accounting records, and operator obligations.",
+    title: "Business claims",
+    text: "Civil matters involving payments, services, records, and commercial relationships.",
   },
   {
-    title: "Lease interpretation",
-    text: "Matters involving contract language, termination, obligations, and lessor-lessee rights.",
+    title: "Employment matters",
+    text: "Advice and representation involving workplace agreements and disputes.",
   },
   {
-    title: "Surface and access rights",
-    text: "Property matters involving access, use, damage claims, and competing rights.",
+    title: "Regulatory matters",
+    text: "General advice involving policies, filings, deadlines, and administrative requirements.",
   },
   {
-    title: "Contract disputes",
-    text: "Trial and appellate work where agreements and business records require close analysis.",
+    title: "Administrative appeals",
+    text: "Review and appeal work involving agency records, deadlines, and written decisions.",
   },
   {
-    title: "Inherited interests",
-    text: "Representation involving inherited property interests, contested transfers, and recovery claims.",
+    title: "General counsel",
+    text: "Practical advice for policies, contracts, risk review, and recurring legal questions.",
   },
 ];
 
 const stats = [
-  { label: "Jurisdiction", value: "Texas" },
-  { label: "Practice", value: "Trial and appellate" },
-  { label: "Coverage", value: "Statewide" },
-  { label: "Focus", value: "Energy and property matters" },
+  { label: "Profile", value: "Example only" },
+  { label: "Practice", value: "Civil and business" },
+  { label: "Coverage", value: "Regional" },
+  { label: "Availability", value: "By appointment" },
 ];
 
 const focusableSelector =
@@ -90,14 +90,14 @@ export default function LegalServicesDemo() {
       <a className={styles.skipLink} href="#main-content">Skip to main content</a>
 
       <div className={styles.demoBar}>
-        <span>Sanitized interface sample</span>
+        <span>Portfolio UI sample · Example content</span>
         <Link href="/#work">Back to portfolio</Link>
       </div>
 
       <header className={styles.siteHeader}>
-        <a className={styles.brand} href="#top" aria-label="Northline Legal demo home">
-          <span className={styles.brandName}>Northline Legal</span>
-          <span className={styles.brandLine}>Energy and Property Litigation</span>
+        <a className={styles.brand} href="#top" aria-label="Sample Legal Office home">
+          <span className={styles.brandName}>Sample Legal Office</span>
+          <span className={styles.brandLine}>Counsel and Representation</span>
         </a>
         <nav className={styles.primaryNav} aria-label="Demo navigation">
           <a href="#about">About</a>
@@ -111,33 +111,33 @@ export default function LegalServicesDemo() {
         <section id="top" className={styles.hero}>
           <div className={styles.heroInner}>
             <div className={styles.heroRule} aria-hidden="true" />
-            <p className={styles.eyebrow}>Texas · Statewide trial and appellate practice</p>
-            <h1>Texas energy and property litigation counsel.</h1>
+            <p className={styles.eyebrow}>Regional · Civil and business practice</p>
+            <h1>Clear counsel for complex business matters.</h1>
             <p className={styles.lede}>
-              A formal legal-services interface for complex matters involving
-              ownership, contracts, title history, and property rights.
+              A formal legal-services interface for contracts, disputes,
+              transactions, and appeals.
             </p>
             <div className={styles.heroActions}>
               <a className={styles.buttonPrimary} href="#practice">Review practice areas</a>
               <a className={styles.buttonSecondary} href="#contact">Office information</a>
             </div>
-            <p className={styles.regions}>West Texas · East Texas · Gulf Coast · Statewide</p>
+            <p className={styles.regions}>Advisory · Disputes · Transactions · Appeals</p>
           </div>
         </section>
 
         <section id="about" className={`${styles.section} ${styles.twoColumn}`}>
           <div>
             <p className={styles.sectionKicker}>About the Firm</p>
-            <h2>Focused representation for Texas energy matters.</h2>
+            <h2>Clear information and direct navigation.</h2>
           </div>
           <div className={styles.bodyCopy}>
             <p>
-              The interface organizes a specialized practice around clear service
-              descriptions, attorney background, and direct paths to office information.
+              The interface organizes services, attorney background, and office
+              information without a marketing-heavy front page.
             </p>
             <p>
-              Client-specific biography, outcomes, addresses, and contact details have
-              been replaced while the original site structure remains intact.
+              All names, credentials, locations, outcomes, and contact details on this
+              page are example content.
             </p>
           </div>
         </section>
@@ -145,19 +145,19 @@ export default function LegalServicesDemo() {
         <section id="attorney" className={`${styles.section} ${styles.attorney}`}>
           <div className={styles.attorneyHeading}>
             <p className={styles.sectionKicker}>Attorney Profile</p>
-            <h2>Avery Cole</h2>
+            <h2>Sample Attorney</h2>
           </div>
 
           <div className={styles.attorneyGrid}>
             <article className={styles.profileCard}>
               <div className={styles.headshotWrap} aria-hidden="true">
-                <span className={styles.headshotPlaceholder}>AC</span>
+                <span className={styles.headshotPlaceholder}>SA</span>
               </div>
               <div className={styles.profileBio}>
-                <p className={styles.profileCardName}>Avery Cole</p>
+                <p className={styles.profileCardName}>Sample Attorney</p>
                 <p>
-                  Fictional profile content demonstrates the original biography card
-                  without exposing a real attorney&apos;s identity or history.
+                  Example biography copy. No real person, credential, employer, or
+                  case history is represented.
                 </p>
                 <button
                   ref={openButtonRef}
@@ -172,12 +172,12 @@ export default function LegalServicesDemo() {
 
             <div className={styles.attorneyIntro}>
               <p>
-                The source design pairs a substantial profile card with narrative
-                experience and a compact grid of practice facts.
+                The profile area presents background information beside a compact
+                grid of practice details.
               </p>
               <p>
-                The recreated interaction keeps the source layout and adds explicit
-                focus placement, Escape dismissal, focus containment, and focus return.
+                The profile opens in a keyboard-accessible dialog with Escape
+                dismissal, contained focus, and focus return.
               </p>
               <dl className={styles.statGrid}>
                 {stats.map((stat) => (
@@ -194,10 +194,10 @@ export default function LegalServicesDemo() {
         <section id="practice" className={`${styles.section} ${styles.practice}`}>
           <div className={styles.sectionHeader}>
             <p className={styles.sectionKicker}>Practice Areas</p>
-            <h2>Energy, contract, title, and property litigation.</h2>
+            <h2>Civil, business, and advisory services.</h2>
             <p>
-              Practice areas are outlined plainly so clients and referring counsel
-              can understand the litigation scope quickly.
+              Practice areas are listed plainly so visitors can understand the
+              sample service structure quickly.
             </p>
           </div>
           <div className={styles.cards}>
@@ -210,12 +210,12 @@ export default function LegalServicesDemo() {
           </div>
         </section>
 
-        <section className={`${styles.section} ${styles.supreme}`}>
-          <p className={styles.sectionKicker}>Appellate Experience</p>
-          <h2>Depth for document-intensive property disputes.</h2>
+        <section className={`${styles.section} ${styles.highlight}`}>
+          <p className={styles.sectionKicker}>Appeals and Review</p>
+          <h2>Support for document-heavy disputes and appeals.</h2>
           <p>
-            This section preserves the source site&apos;s high-contrast appellate callout
-            without retaining case names, outcomes, or client claims.
+            Example copy only. No real case names, outcomes, courts, or client
+            claims are included.
           </p>
         </section>
 
@@ -223,28 +223,28 @@ export default function LegalServicesDemo() {
           <div>
             <p className={styles.sectionKicker}>Office Information</p>
             <h2>Contact the firm.</h2>
-            <p>Production office and contact details are intentionally omitted.</p>
+              <p>Office and contact details are not included in this sample.</p>
           </div>
           <div className={styles.officeInformationGrid}>
             <article className={styles.officeDetailCard}>
-              <h3>Northline Legal</h3>
-              <p>Fictional name used for this sanitized interface demonstration.</p>
+              <h3>Sample Legal Office</h3>
+              <p>Placeholder name used only for this UI sample.</p>
             </article>
             <article className={styles.officeDetailCard}>
               <h3>Contact</h3>
-              <p>Phone, email, fax, and domain removed.</p>
+              <p>Phone, email, fax, and domain are not included.</p>
             </article>
             <article className={styles.officeDetailCard}>
               <h3>Office Hours</h3>
-              <p>Scheduling details removed.</p>
+              <p>Scheduling details are not included.</p>
             </article>
           </div>
         </section>
       </main>
 
       <footer className={styles.footer}>
-        <p>Sanitized legal-services interface sample.</p>
-        <p>No client, attorney, case, or contact data is connected.</p>
+        <p>Portfolio UI sample.</p>
+        <p>Example content only.</p>
       </footer>
 
       {profileOpen ? (
@@ -268,14 +268,13 @@ export default function LegalServicesDemo() {
               ×
             </button>
             <div className={styles.dialogLayout}>
-              <span className={styles.modalHeadshot} aria-hidden="true">AC</span>
+              <span className={styles.modalHeadshot} aria-hidden="true">SA</span>
               <div>
                 <p className={styles.sectionKicker}>Attorney Profile</p>
-                <h2 id="profile-dialog-title">Avery Cole</h2>
+                <h2 id="profile-dialog-title">Sample Attorney</h2>
                 <p>
-                  Avery Cole is a fictional name used for this sanitized demonstration.
-                  The original profile layout and accessible dialog behavior are preserved;
-                  personal history and contact information are not.
+                  This example profile is not based on a real person. Names,
+                  credentials, employment history, and contact details are not included.
                 </p>
               </div>
             </div>

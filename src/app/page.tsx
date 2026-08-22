@@ -4,10 +4,10 @@ import Link from "next/link";
 const projects = [
   {
     index: "01",
-    title: "Intern LaunchPad",
-    context: "Internal application",
+    title: "Program operations workspace",
+    context: "Internal web application",
     description:
-      "Employee-facing program hub for intern information, supervisor resources, and weekly time reporting.",
+      "Internal hub for schedules, resources, contacts, team files, and recurring submissions.",
     implementation:
       "Built the SPFx interface in React and TypeScript; connected Microsoft Forms and Power Automate; implemented keyboard and screen-reader support.",
     stack: "SPFx · React · TypeScript · Power Automate · SharePoint",
@@ -15,9 +15,9 @@ const projects = [
   {
     index: "02",
     title: "Enterprise intranet and governance",
-    context: "Platform modernization",
+    context: "Platform administration",
     description:
-      "Intranet rebuild and operating model for an agency SharePoint environment with more than 500 sites.",
+      "Rebuilt the intranet for an agency SharePoint environment with more than 500 sites.",
     implementation:
       "Restructured navigation and information architecture; standardized ownership and permissions; built reusable provisioning and PnP PowerShell reporting.",
     stack: "SharePoint Online · PnP PowerShell · Governance · WCAG",
@@ -25,7 +25,7 @@ const projects = [
   {
     index: "03",
     title: "Operational automation",
-    context: "Process engineering",
+    context: "Workflow automation",
     description:
       "Workflows for onboarding, approvals, reporting, provisioning, access reviews, and recurring administrative work.",
     implementation:
@@ -35,11 +35,11 @@ const projects = [
   {
     index: "04",
     title: "Accessible web platforms",
-    context: "Web engineering",
+    context: "Web development",
     description:
       "Responsive public and internal websites with maintainable content structure and accessible interactions.",
     implementation:
-      "Developed React and Next.js interfaces, including a production site for a private law firm, with WCAG requirements treated as implementation constraints.",
+      "Developed React and Next.js interfaces, including a production site for a private law firm, with WCAG requirements built into the implementation.",
     stack: "Next.js · React · TypeScript · WCAG",
   },
 ];
@@ -47,19 +47,19 @@ const projects = [
 const technicalGroups = [
   {
     label: "Automation",
-    items: "Power Automate, PowerShell, PnP, REST APIs, approvals, provisioning, reporting",
+    items: "Power Automate, PowerShell, Python, PnP PowerShell, REST APIs, Forms",
   },
   {
     label: "Applications",
-    items: "SharePoint Online, SPFx, Microsoft 365, Forms, internal tools, information architecture",
+    items: "SharePoint Online, SPFx, Microsoft 365, Entra ID, Intune, information architecture",
   },
   {
-    label: "Engineering",
-    items: "TypeScript, React, Next.js, Git, systems integration, WCAG 2.1/2.2, semantic HTML",
+    label: "Development",
+    items: "TypeScript, JavaScript, React, Next.js, HTML/CSS, Git",
   },
   {
     label: "Operations",
-    items: "Entra ID, permissions, Intune, Cisco switching, Fortinet, VPN, DNS, DHCP",
+    items: "Cisco switching, Fortinet, VPN, VLANs, DNS, DHCP, endpoint support",
   },
 ];
 
@@ -140,8 +140,8 @@ export default function Home() {
               Builds and supports automation, integrations, enterprise applications,
               and internal platforms in a distributed public-sector environment.
               Current work spans Power Platform, SharePoint/SPFx, PowerShell/PnP,
-              React/Next.js, identity, governance, accessibility, reporting, and
-              infrastructure-aware operations.
+              Python, React/Next.js, identity, governance, accessibility, reporting,
+              and network and endpoint support.
             </p>
 
             <dl className="profile-grid">
@@ -151,7 +151,7 @@ export default function Home() {
               </div>
               <div>
                 <dt>Primary scope</dt>
-                <dd>Automation, integration, modernization</dd>
+                <dd>Automation, applications, platform support</dd>
               </div>
               <div>
                 <dt>Environment</dt>
@@ -159,7 +159,7 @@ export default function Home() {
               </div>
               <div>
                 <dt>Core tools</dt>
-                <dd>Power Automate · PowerShell · TypeScript · React · SPFx</dd>
+                <dd>Power Automate · PowerShell · Python · TypeScript · SPFx</dd>
               </div>
             </dl>
           </div>
@@ -192,21 +192,20 @@ export default function Home() {
               <div className="samples-heading">
                 <p className="section-index">UI samples</p>
                 <div>
-                  <h3 id="samples-heading">Sanitized interface demos</h3>
+                  <h3 id="samples-heading">Interface samples</h3>
                   <p>
-                    Working recreations of client-facing projects. Names, contact
-                    information, storefront identifiers, and client branding have
-                    been replaced.
+                    UI samples based on completed work. Client names, branding,
+                    images, and identifying content are not included.
                   </p>
                 </div>
               </div>
 
               <div className="sample-grid">
                 <article className="sample-card">
-                  <Link className="sample-image" href="/demos/intern-launchpad">
+                  <Link className="sample-image" href="/demos/program-workspace">
                     <Image
-                      src="/demos/intern-launchpad-preview.jpg"
-                      alt="Preview of a sanitized SPFx intern program workspace"
+                      src="/demos/program-workspace-preview.jpg"
+                      alt="Preview of a generic SPFx program workspace"
                       fill
                       sizes="(max-width: 760px) 100vw, 33vw"
                     />
@@ -214,9 +213,9 @@ export default function Home() {
                   <div className="sample-copy">
                     <div>
                       <p>SPFx · React · TypeScript · Power Automate · WCAG 2.2</p>
-                      <h4>Intern program workspace</h4>
+                      <h4>Program workspace</h4>
                     </div>
-                    <Link href="/demos/intern-launchpad">
+                    <Link href="/demos/program-workspace">
                       Open interactive demo <span aria-hidden="true">→</span>
                     </Link>
                   </div>
@@ -226,7 +225,7 @@ export default function Home() {
                   <Link className="sample-image" href="/demos/legal-services">
                     <Image
                       src="/demos/legal-services-preview.jpg"
-                      alt="Preview of a sanitized legal services website interface"
+                      alt="Preview of a generic legal services website interface"
                       fill
                       sizes="(max-width: 760px) 100vw, 33vw"
                     />
@@ -246,15 +245,15 @@ export default function Home() {
                   <Link className="sample-image" href="/demos/product-catalog">
                     <Image
                       src="/demos/product-catalog-preview.jpg"
-                      alt="Preview of a sanitized multi-source product inventory interface"
+                      alt="Preview of a generic product catalog interface"
                       fill
                       sizes="(max-width: 760px) 100vw, 33vw"
                     />
                   </Link>
                   <div className="sample-copy">
                     <div>
-                      <p>React · Source adapters · Accessible UI</p>
-                      <h4>Multi-source product inventory</h4>
+                      <p>React · Data imports · Accessible UI</p>
+                      <h4>Product catalog</h4>
                     </div>
                     <Link href="/demos/product-catalog">
                       Open interactive demo <span aria-hidden="true">→</span>
@@ -320,15 +319,14 @@ export default function Home() {
           <div className="container">
             <SectionHeader
               index="04"
-              title="Accessibility engineering"
+              title="Accessibility implementation"
               id="accessibility-heading"
             />
 
             <div className="depth-layout">
               <p className="depth-intro">
-                Applies WCAG 2.1/2.2 and Section 508 requirements during
-                component design, implementation, and review across internal
-                applications, SharePoint experiences, and public websites.
+                Builds WCAG 2.1/2.2 and Section 508 requirements into internal
+                applications, SharePoint components, and public websites.
               </p>
 
               <dl className="depth-list">
@@ -356,8 +354,8 @@ export default function Home() {
                 <div>
                   <dt>Applied work</dt>
                   <dd>
-                    Intern LaunchPad, SPFx components, intranet navigation and
-                    content, and responsive public websites.
+                    SPFx components, internal program tools, intranet navigation,
+                    and responsive public websites.
                   </dd>
                 </div>
               </dl>
@@ -373,50 +371,50 @@ export default function Home() {
           <div className="container">
             <SectionHeader
               index="05"
-              title="Network-aware automation"
+              title="Networking in automation"
               id="networking-heading"
             />
 
             <div className="depth-layout">
               <div className="depth-intro">
                 <p>
-                  Hands-on operational experience with Cisco switching, Fortinet
-                  firewalls, VPNs, VLANs, DHCP, DNS, site connectivity, and incident
-                  response across more than 40 distributed locations.
+                  Works directly with Cisco switching, Fortinet firewalls, VPNs,
+                  VLANs, DHCP, DNS, site connectivity, and incident response across
+                  more than 40 locations.
                 </p>
                 <p className="scope-note">
-                  The depth is operational and troubleshooting-focused; core network
-                  architecture remains owned by the network team.
+                  This is operational and troubleshooting work. The network team owns
+                  core architecture.
                 </p>
               </div>
 
               <dl className="depth-list">
                 <div>
-                  <dt>Failure domains</dt>
+                  <dt>Before changes</dt>
                   <dd>
-                    Separates application, API, identity, DNS, VPN, firewall, and
-                    site-connectivity issues before changing an automation.
+                    Checks whether a failure is in the application, API, identity,
+                    DNS, VPN, firewall, or site connection before changing a workflow.
                   </dd>
                 </div>
                 <div>
-                  <dt>Dependency design</dt>
+                  <dt>Access and routing</dt>
                   <dd>
-                    Accounts for authentication, permissions, segmentation, routing,
-                    and remote-site constraints when connecting systems.
+                    Accounts for authentication, permissions, VLANs, routing, and
+                    remote-site limits when connecting systems.
                   </dd>
                 </div>
                 <div>
-                  <dt>Automation opportunities</dt>
+                  <dt>What to automate</dt>
                   <dd>
-                    Provides the context needed to automate inventory, validation,
-                    reporting, monitoring, and repeatable changes safely.
+                    Inventory, validation, reporting, monitoring, and repeatable
+                    administrative changes are good candidates for automation.
                   </dd>
                 </div>
                 <div>
-                  <dt>Operational value</dt>
+                  <dt>Support</dt>
                   <dd>
-                    Produces automations that are easier to diagnose because network
-                    and infrastructure dependencies are documented up front.
+                    Documents network and infrastructure dependencies so failures can
+                    be traced and handed to the correct team.
                   </dd>
                 </div>
               </dl>

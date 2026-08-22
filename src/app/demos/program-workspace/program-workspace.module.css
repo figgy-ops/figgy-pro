@@ -1,23 +1,23 @@
-.internHub {
-  --intern-primary: #8a1f14;
-  --intern-accent: #b48a3c;
-  --intern-bg: #f4efe4;
-  --intern-max-width: 1400px;
-  --intern-hero-height: 430px;
-  --division-button-bg: #8a1f14;
-  --division-button-fg: #fffaf0;
+.workspace {
+  --workspace-primary: #8a1f14;
+  --workspace-accent: #b48a3c;
+  --workspace-bg: #f4efe4;
+  --workspace-max-width: 1400px;
+  --workspace-hero-height: 430px;
+  --team-button-bg: #8a1f14;
+  --team-button-fg: #fffaf0;
   width: 100%;
   min-height: 100vh;
   margin: 0;
-  background: var(--intern-bg);
-  color: var(--intern-primary);
+  background: var(--workspace-bg);
+  color: var(--workspace-primary);
   font-family: Arial, Helvetica, sans-serif;
   overflow: hidden;
 }
 
-.internHub *,
-.internHub *::before,
-.internHub *::after {
+.workspace *,
+.workspace *::before,
+.workspace *::after {
   box-sizing: border-box;
 }
 
@@ -28,9 +28,9 @@
   z-index: 1000001;
   transform: translateY(-160%);
   padding: 10px 14px;
-  border: 2px solid var(--intern-primary);
+  border: 2px solid var(--workspace-primary);
   background: #fffaf0;
-  color: var(--intern-primary);
+  color: var(--workspace-primary);
   font-weight: 900;
 }
 
@@ -40,11 +40,11 @@
 
 .hero {
   position: relative;
-  min-height: var(--intern-hero-height);
+  min-height: var(--workspace-hero-height);
   background-image: none;
   background-size: cover;
   background-position: center center;
-  border-bottom: 10px solid var(--intern-accent);
+  border-bottom: 10px solid var(--workspace-accent);
   overflow: hidden;
 }
 
@@ -54,7 +54,7 @@
   top: 0;
   right: 0;
   left: 0;
-  width: min(var(--intern-max-width), 100% - 64px);
+  width: min(var(--workspace-max-width), 100% - 64px);
   min-height: 46px;
   display: flex;
   align-items: center;
@@ -75,7 +75,7 @@
 }
 
 .heroShade {
-  min-height: var(--intern-hero-height);
+  min-height: var(--workspace-hero-height);
   display: flex;
   align-items: center;
   position: relative;
@@ -105,17 +105,17 @@
 .heroContent {
   position: relative;
   z-index: 1;
-  width: min(var(--intern-max-width), 100% - 64px);
+  width: min(var(--workspace-max-width), 100% - 64px);
   margin: 0 auto;
   padding: 82px 0 72px;
   animation: fadeSlideUp 700ms ease-out both;
 }
 
-.agency,
+.contextLabel,
 .kicker,
 .cardLabel {
   margin: 0 0 12px;
-  color: var(--intern-accent);
+  color: var(--workspace-accent);
   font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.17em;
@@ -143,7 +143,7 @@
 }
 
 .main {
-  width: min(var(--intern-max-width), 100% - 64px);
+  width: min(var(--workspace-max-width), 100% - 64px);
   margin: 0 auto;
   padding: 56px 0 84px;
 }
@@ -158,13 +158,13 @@
 }
 
 .intro h2,
-.supervisorBand h2,
-.divisionSection h2,
-.headshotSection h2,
+.managerBand h2,
+.teamSection h2,
+.profileSection h2,
 .sectionHeader h2,
 .profileModalContent h2 {
   margin: 0;
-  color: var(--intern-primary);
+  color: var(--workspace-primary);
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(32px, 4vw, 50px);
   font-weight: 700;
@@ -173,9 +173,9 @@
 
 .intro > p,
 .primaryCard p,
-.supervisorBand p,
-.divisionSection p,
-.headshotSection p,
+.managerBand p,
+.teamSection p,
+.profileSection p,
 .quickGuideCard p,
 .supportCard p,
 .profileModalBio {
@@ -197,10 +197,10 @@
 }
 
 .primaryCard,
-.headshotCard {
+.profileCard {
   background: #fffaf0;
   border: 1px solid rgba(91, 72, 39, 0.28);
-  border-top: 6px solid var(--intern-accent);
+  border-top: 6px solid var(--workspace-accent);
   box-shadow: 0 14px 28px rgba(48, 39, 25, 0.08);
   transition:
     transform 180ms ease,
@@ -216,7 +216,7 @@
 }
 
 .primaryCard:hover,
-.headshotCard:hover {
+.profileCard:hover {
   transform: translateY(-4px);
   box-shadow: 0 18px 36px rgba(48, 39, 25, 0.14);
   border-color: rgba(91, 72, 39, 0.42);
@@ -226,9 +226,9 @@
 .primaryCard h3,
 .quickGuideCard h3,
 .supportCard h3,
-.headshotCard h3 {
+.profileCard h3 {
   margin: 0 0 12px;
-  color: var(--intern-primary);
+  color: var(--workspace-primary);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 31px;
   font-weight: 700;
@@ -240,9 +240,9 @@
 }
 
 .primaryCard button,
-.supervisorBand button,
+.managerBand button,
 .supportCard button,
-.headshotCard button,
+.profileCard button,
 .profileModalContent button {
   display: inline-flex;
   align-items: center;
@@ -251,10 +251,10 @@
   max-width: 100%;
   position: relative;
   overflow: hidden;
-  border: 2px solid var(--intern-primary);
+  border: 2px solid var(--workspace-primary);
   border-radius: 999px;
   padding: 12px 22px;
-  background: var(--intern-primary);
+  background: var(--workspace-primary);
   color: #fffaf0;
   font-size: 15px;
   font-weight: 900;
@@ -269,13 +269,13 @@
 }
 
 .primaryCard button:hover,
-.supervisorBand button:hover,
+.managerBand button:hover,
 .supportCard button:hover,
-.headshotCard button:hover,
+.profileCard button:hover,
 .profileModalContent button:hover {
   transform: translateY(-2px);
   background: #fffaf0;
-  color: var(--intern-primary);
+  color: var(--workspace-primary);
   box-shadow: 0 8px 18px rgba(48, 39, 25, 0.18);
 }
 
@@ -287,58 +287,58 @@
   font-weight: 700;
 }
 
-.supervisorBand,
-.divisionSection,
-.headshotSection {
+.managerBand,
+.teamSection,
+.profileSection {
   margin-top: 34px;
   padding: 30px;
   background: #fffaf0;
   border: 1px solid rgba(91, 72, 39, 0.28);
-  border-top: 6px solid var(--intern-accent);
+  border-top: 6px solid var(--workspace-accent);
   box-shadow: 0 14px 28px rgba(48, 39, 25, 0.08);
   animation: fadeSlideUp 650ms ease-out 240ms both;
 }
 
-.supervisorBand {
+.managerBand {
   display: flex;
   gap: 28px;
   align-items: center;
   justify-content: space-between;
   background: #e6d8bf;
   border-top: 0;
-  border-left: 8px solid var(--intern-accent);
+  border-left: 8px solid var(--workspace-accent);
 }
 
-.supervisorCopy,
-.divisionHeader,
-.headshotHeader {
+.managerCopy,
+.teamHeader,
+.profileHeader {
   max-width: 880px;
 }
 
-.supervisorBand p:last-child {
+.managerBand p:last-child {
   margin-bottom: 0;
 }
 
-.divisionSection {
+.teamSection {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(320px, 1.08fr);
   gap: 32px;
   align-items: center;
 }
 
-.divisionButtonGrid {
+.teamButtonGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
 
-.divisionButtonGrid button {
+.teamButtonGrid button {
   min-height: 82px;
   border: 2px solid rgba(91, 72, 39, 0.28);
   border-radius: 0;
   padding: 18px;
-  background: var(--division-button-bg);
-  color: var(--division-button-fg);
+  background: var(--team-button-bg);
+  color: var(--team-button-fg);
   font-size: 20px;
   font-weight: 900;
   cursor: pointer;
@@ -346,33 +346,33 @@
   transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
 }
 
-.divisionButtonGrid button:hover {
+.teamButtonGrid button:hover {
   transform: translateY(-3px);
   box-shadow: 0 16px 28px rgba(48, 39, 25, 0.18);
   filter: brightness(1.08);
 }
 
-.headshotSection {
+.profileSection {
   padding: 34px;
 }
 
-.headshotHeader {
+.profileHeader {
   margin-bottom: 30px;
 }
 
-.headshotGrid {
+.profileGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 22px;
 }
 
-.headshotCard {
+.profileCard {
   min-height: 100%;
   padding: 24px 18px 22px;
   text-align: center;
 }
 
-.headshotImageButton {
+.profileImageButton {
   display: block !important;
   width: 100% !important;
   margin: 0 auto 18px !important;
@@ -383,30 +383,30 @@
   cursor: pointer;
 }
 
-.headshotImageButton:hover {
+.profileImageButton:hover {
   transform: none !important;
   background: transparent !important;
   box-shadow: none !important;
 }
 
-.headshotImageWrap {
+.profileImageWrap {
   display: block;
   width: 156px;
   height: 156px;
   margin: 0 auto;
   padding: 7px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #f2d991 0%, var(--intern-accent) 42%, #7a5a1e 100%);
+  background: linear-gradient(135deg, #f2d991 0%, var(--workspace-accent) 42%, #7a5a1e 100%);
   box-shadow: 0 12px 26px rgba(48, 39, 25, 0.18);
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-.headshotImageButton:hover .headshotImageWrap {
+.profileImageButton:hover .profileImageWrap {
   transform: translateY(-3px) scale(1.025);
   box-shadow: 0 18px 34px rgba(48, 39, 25, 0.24);
 }
 
-.headshotPlaceholder {
+.profilePlaceholder {
   width: 100%;
   height: 100%;
   display: grid;
@@ -414,13 +414,13 @@
   border: 4px solid #fffaf0;
   border-radius: 50%;
   background: #e6d8bf;
-  color: var(--intern-primary);
+  color: var(--workspace-primary);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 34px;
   font-weight: 700;
 }
 
-.headshotContent h3 {
+.profileContent h3 {
   margin-top: 0;
   font-size: 25px;
 }
@@ -437,7 +437,7 @@
 .compactMeta dt,
 .profileModalMeta dt {
   margin-bottom: 3px;
-  color: var(--intern-accent);
+  color: var(--workspace-accent);
   font-size: 12px;
   font-weight: 900;
   letter-spacing: 0.12em;
@@ -491,7 +491,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 28px;
-  border-left: 8px solid var(--intern-accent);
+  border-left: 8px solid var(--workspace-accent);
 }
 
 .supportCard h3 {
@@ -519,7 +519,7 @@
   overflow: auto;
   padding: 34px;
   background: #fffaf0;
-  border: 8px solid var(--intern-accent);
+  border: 8px solid var(--workspace-accent);
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
   animation: modalIn 180ms ease-out both;
 }
@@ -532,7 +532,7 @@
   height: 44px;
   border: 0;
   background: transparent;
-  color: var(--intern-primary);
+  color: var(--workspace-primary);
   font-size: 38px;
   font-weight: 700;
   line-height: 1;
@@ -545,11 +545,11 @@
   aspect-ratio: 1 / 1;
   padding: 10px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #f2d991 0%, var(--intern-accent) 42%, #7a5a1e 100%);
+  background: linear-gradient(135deg, #f2d991 0%, var(--workspace-accent) 42%, #7a5a1e 100%);
   box-shadow: 0 18px 36px rgba(48, 39, 25, 0.18);
 }
 
-.profileModalImageWrap .headshotPlaceholder {
+.profileModalImageWrap .profilePlaceholder {
   border-width: 6px;
   font-size: 64px;
 }
@@ -569,7 +569,7 @@
   margin: 0 0 26px;
 }
 
-.internHub :focus-visible {
+.workspace :focus-visible {
   outline: 4px solid #1f5faa;
   outline-offset: 4px;
 }
@@ -613,11 +613,11 @@
 }
 
 @media (max-width: 1180px) {
-  .headshotGrid {
+  .profileGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .divisionSection,
+  .teamSection,
   .intro {
     grid-template-columns: 1fr;
   }
@@ -627,7 +627,7 @@
   .heroContent,
   .main,
   .demoUtility {
-    width: min(100% - 34px, var(--intern-max-width));
+    width: min(100% - 34px, var(--workspace-max-width));
   }
 
   .hero h1 {
@@ -640,12 +640,12 @@
     grid-template-columns: 1fr;
   }
 
-  .supervisorBand,
+  .managerBand,
   .supportCard {
     display: block;
   }
 
-  .supervisorBand button,
+  .managerBand button,
   .supportCard button {
     margin-top: 18px;
   }
@@ -676,20 +676,20 @@
   }
 
   .primaryCard,
-  .supervisorBand,
-  .divisionSection,
-  .headshotSection,
+  .managerBand,
+  .teamSection,
+  .profileSection,
   .quickGuideCard,
   .supportCard {
     padding: 22px;
   }
 
-  .headshotGrid,
-  .divisionButtonGrid {
+  .profileGrid,
+  .teamButtonGrid {
     grid-template-columns: 1fr;
   }
 
-  .headshotImageWrap {
+  .profileImageWrap {
     width: 138px;
     height: 138px;
   }
@@ -710,17 +710,17 @@
   .heroContent,
   .intro,
   .primaryCard,
-  .supervisorBand,
-  .divisionSection,
-  .headshotSection,
+  .managerBand,
+  .teamSection,
+  .profileSection,
   .profileModal {
     animation: none;
   }
 
   .primaryCard,
-  .headshotCard,
-  .headshotImageWrap,
-  .divisionButtonGrid button {
+  .profileCard,
+  .profileImageWrap,
+  .teamButtonGrid button {
     transition: none;
   }
 }
