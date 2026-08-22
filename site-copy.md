@@ -83,6 +83,26 @@ Technology operations, user and endpoint support, Microsoft cloud administration
 - Fortinet Network Security Expert Level 3: Certified Associate, 2025–2027
 - Career Essentials in System Administration, issued 2025
 
+## Accessibility engineering
+
+Applies WCAG 2.1/2.2 and Section 508 requirements during component design, implementation, and review across internal applications, SharePoint experiences, and public websites.
+
+- **Structure:** Semantic HTML, useful heading and list structure, accessible names, and ARIA when native controls are not sufficient.
+- **Interaction:** Keyboard operation, visible focus, logical tab order, modal focus management, and clear form labels and errors.
+- **Verification:** Screen-reader checks, contrast review, zoom and responsive reflow, and testing against defined acceptance criteria.
+- **Applied work:** Intern LaunchPad, SPFx components, intranet navigation and content, and responsive public websites.
+
+## Network-aware automation
+
+Hands-on operational experience with Cisco switching, Fortinet firewalls, VPNs, VLANs, DHCP, DNS, site connectivity, and incident response across more than 40 distributed locations.
+
+The depth is operational and troubleshooting-focused; core network architecture remains owned by the network team.
+
+- **Failure domains:** Separates application, API, identity, DNS, VPN, firewall, and site-connectivity issues before changing an automation.
+- **Dependency design:** Accounts for authentication, permissions, segmentation, routing, and remote-site constraints when connecting systems.
+- **Automation opportunities:** Provides the context needed to automate inventory, validation, reporting, monitoring, and repeatable changes safely.
+- **Operational value:** Produces automations that are easier to diagnose because network and infrastructure dependencies are documented up front.
+
 ## Contact
 
 - [Email](mailto:caroline360@gmail.com)

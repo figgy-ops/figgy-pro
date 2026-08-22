@@ -398,6 +398,63 @@ a {
   white-space: nowrap;
 }
 
+.depth-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.7fr) minmax(520px, 1.3fr);
+  gap: clamp(50px, 8vw, 110px);
+  padding-top: 28px;
+  border-top: 1px solid var(--ink);
+}
+
+.depth-intro {
+  margin-bottom: 0;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.depth-intro > p:first-child {
+  margin-bottom: 18px;
+}
+
+.scope-note {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.7rem;
+  line-height: 1.6;
+}
+
+.depth-list {
+  margin-bottom: 0;
+  border-top: 1px solid var(--line);
+}
+
+.depth-list > div {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 26px;
+  padding-block: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.depth-list dt {
+  margin-top: 2px;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.depth-list dd {
+  margin-bottom: 0;
+  color: var(--ink-soft);
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+
 .contact {
   padding-block: 52px;
   scroll-margin-top: 58px;
@@ -491,6 +548,11 @@ a {
   .technical-grid > div:nth-child(n) {
     padding-inline: 0;
     border-left: 0;
+  }
+
+  .depth-layout {
+    grid-template-columns: 1fr;
+    gap: 34px;
   }
 }
 
@@ -592,6 +654,11 @@ a {
   .credential-row {
     grid-template-columns: 1fr;
     gap: 6px;
+  }
+
+  .depth-list > div {
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
   }
 
   .site-footer .container {

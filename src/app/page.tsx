@@ -233,10 +233,122 @@ export default function Home() {
           </div>
         </section>
 
+        <section
+          className="section section-muted"
+          id="accessibility"
+          aria-labelledby="accessibility-heading"
+        >
+          <div className="container">
+            <SectionHeader
+              index="04"
+              title="Accessibility engineering"
+              id="accessibility-heading"
+            />
+
+            <div className="depth-layout">
+              <p className="depth-intro">
+                Applies WCAG 2.1/2.2 and Section 508 requirements during
+                component design, implementation, and review across internal
+                applications, SharePoint experiences, and public websites.
+              </p>
+
+              <dl className="depth-list">
+                <div>
+                  <dt>Structure</dt>
+                  <dd>
+                    Semantic HTML, useful heading and list structure, accessible
+                    names, and ARIA when native controls are not sufficient.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Interaction</dt>
+                  <dd>
+                    Keyboard operation, visible focus, logical tab order, modal
+                    focus management, and clear form labels and errors.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Verification</dt>
+                  <dd>
+                    Screen-reader checks, contrast review, zoom and responsive
+                    reflow, and testing against defined acceptance criteria.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Applied work</dt>
+                  <dd>
+                    Intern LaunchPad, SPFx components, intranet navigation and
+                    content, and responsive public websites.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </section>
+
+        <section
+          className="section"
+          id="networking"
+          aria-labelledby="networking-heading"
+        >
+          <div className="container">
+            <SectionHeader
+              index="05"
+              title="Network-aware automation"
+              id="networking-heading"
+            />
+
+            <div className="depth-layout">
+              <div className="depth-intro">
+                <p>
+                  Hands-on operational experience with Cisco switching, Fortinet
+                  firewalls, VPNs, VLANs, DHCP, DNS, site connectivity, and incident
+                  response across more than 40 distributed locations.
+                </p>
+                <p className="scope-note">
+                  The depth is operational and troubleshooting-focused; core network
+                  architecture remains owned by the network team.
+                </p>
+              </div>
+
+              <dl className="depth-list">
+                <div>
+                  <dt>Failure domains</dt>
+                  <dd>
+                    Separates application, API, identity, DNS, VPN, firewall, and
+                    site-connectivity issues before changing an automation.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Dependency design</dt>
+                  <dd>
+                    Accounts for authentication, permissions, segmentation, routing,
+                    and remote-site constraints when connecting systems.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Automation opportunities</dt>
+                  <dd>
+                    Provides the context needed to automate inventory, validation,
+                    reporting, monitoring, and repeatable changes safely.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Operational value</dt>
+                  <dd>
+                    Produces automations that are easier to diagnose because network
+                    and infrastructure dependencies are documented up front.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </section>
+
         <section className="contact" id="contact" aria-labelledby="contact-heading">
           <div className="container contact-inner">
             <div>
-              <p className="section-index">04 / Contact</p>
+              <p className="section-index">06 / Contact</p>
               <h2 id="contact-heading">Contact</h2>
             </div>
             <div className="contact-details">
