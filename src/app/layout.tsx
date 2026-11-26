@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const title = "Caroline McLallen | Automation, Microsoft 365 & Web Operations";
+const description =
+  "Systems Analyst and Automation Specialist building Power Automate workflows and SharePoint applications, with experience in CMS operations and digital accessibility.";
+
 export const metadata: Metadata = {
-  title: "Caroline McLallen | Automation Specialist & Systems Analyst",
-  description:
-    "Technical résumé for Caroline McLallen, an Automation Specialist and Systems Analyst working across automation, integrations, enterprise applications, SharePoint, web development, governance, and infrastructure.",
+  title,
+  description,
   openGraph: {
-    title: "Caroline McLallen | Automation Specialist & Systems Analyst",
-    description:
-      "Automation, systems integration, enterprise applications, and platform operations.",
+    title,
+    description,
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Caroline McLallen | Automation Specialist & Systems Analyst",
-    description:
-      "Automation, systems integration, enterprise applications, and platform operations.",
+    title,
+    description,
   },
 };
 

@@ -1,89 +1,141 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const projects = [
+const workSections = [
   {
-    index: "01",
-    title: "Program operations workspace",
-    context: "Internal web application",
-    description:
-      "Internal hub for schedules, resources, contacts, team files, and recurring submissions.",
-    implementation:
-      "Built the SPFx interface in React and TypeScript; connected Microsoft Forms and Power Automate; implemented keyboard and screen-reader support.",
-    stack: "SPFx · React · TypeScript · Power Automate · SharePoint",
+    id: "ai-automation",
+    title: "AI and automation",
+    projects: [
+      {
+        title: "SharePoint LMS assignment and certificate workflows",
+        context: "Power Platform",
+        description:
+          "Extended a SharePoint learning management system with Power Automate workflows that create annual training and learning-path assignments. Added eligibility checks and checked existing assignments, completion records, and verified certificates before creating new records. Logged which assignments were created, skipped, or failed for each employee. Built a separate workflow that generates a PDF certificate after verified completion and updates the employee’s training record.",
+        implementation:
+          "Used AI to trace the existing flow actions and diagnose failures from run history. When a group assignment failed, checked the SharePoint group lookup and assignment filters against the data the flow actually received. Verified annual training and learning-path assignments for individuals. Kept All Staff outside that test scope.",
+        stack: "Power Automate · SharePoint Online · Microsoft Entra ID",
+      },
+      {
+        title: "SharePoint Copilot and knowledge retrieval",
+        context: "Enterprise AI",
+        description:
+          "Configured and deployed Copilot agents that help staff find information across SharePoint sites using retrieval-augmented generation (RAG).",
+        implementation:
+          "Connected Copilot agents to SharePoint content, managed Microsoft 365 Copilot license assignments, and trained staff on how to use the tools.",
+        stack: "Microsoft 365 Copilot · SharePoint · RAG",
+      },
+      {
+        title: "AI agent reliability research",
+        context: "Independent evaluation",
+        description:
+          "Built a local Python test harness to study how AI agents follow instructions, complete tasks, and resume interrupted workflows.",
+        implementation:
+          "Designed controlled scenarios that varied instructions and checkpoint conditions. Compared task completion and recovery behavior across scenarios and used pytest to make the checks repeatable. The test suite passed 14 automated checks.",
+        stack: "Python · pytest · Git",
+      },
+    ],
   },
   {
-    index: "02",
-    title: "Enterprise intranet and governance",
-    context: "Platform administration",
-    description:
-      "Rebuilt the intranet for an agency SharePoint environment with more than 500 sites.",
-    implementation:
-      "Restructured navigation and information architecture; standardized ownership and permissions; built reusable provisioning and PnP PowerShell reporting.",
-    stack: "SharePoint Online · PnP PowerShell · Governance · WCAG",
+    id: "sharepoint-administration",
+    title: "SharePoint administration",
+    projects: [
+      {
+        title: "SharePoint intranet and governance",
+        context: "Microsoft 365",
+        description:
+          "Rebuilt the agency intranet and organized contract documents in a repository with custom metadata and views.",
+        implementation:
+          "Improved navigation, disabled anonymous sharing links, and removed self-service site creation in a 500+ site SharePoint environment. Used PnP PowerShell for repeatable administration and wrote procedures for site owners.",
+        stack: "SharePoint Online · PnP PowerShell · Microsoft 365",
+      },
+      {
+        title: "Intern onboarding workspace",
+        context: "Internal application",
+        description:
+          "Built a SharePoint hub for interns to find schedules, onboarding resources, division links, and staff contacts.",
+        implementation:
+          "Built the interface in SPFx and connected a weekly Microsoft Forms timesheet to a SharePoint list through Power Automate.",
+        stack: "SPFx · React · TypeScript · Microsoft Forms · Power Automate",
+      },
+    ],
   },
   {
-    index: "03",
-    title: "Operational automation",
-    context: "Workflow automation",
-    description:
-      "Workflows for onboarding, approvals, reporting, provisioning, access reviews, and recurring administrative work.",
-    implementation:
-      "Mapped business rules and dependencies, connected source systems, built the automation, and documented monitoring and support procedures.",
-    stack: "Power Automate · PowerShell · APIs · Microsoft 365",
-  },
-  {
-    index: "04",
-    title: "Accessible web platforms",
-    context: "Web development",
-    description:
-      "Responsive public and internal websites with maintainable content structure and accessible interactions.",
-    implementation:
-      "Developed React and Next.js interfaces, including a production site for a private law firm, with WCAG requirements built into the implementation.",
-    stack: "Next.js · React · TypeScript · WCAG",
+    id: "web-accessibility",
+    title: "Web operations and accessibility",
+    projects: [
+      {
+        title: "Web publishing and CMS operations",
+        context: "Web operations",
+        description:
+          "Managed a law firm’s WordPress intranet and supported public-sector publishing across SharePoint, Teams, and the agency website.",
+        implementation:
+          "Used Google Analytics to identify hard-to-find, high-demand content and improve navigation, worked with Drupal developers on Outlook-managed calendar embeds, and revised vendor requirements for accessibility and security across WordPress, Drupal, Craft CMS, and custom PHP sites.",
+        stack: "WordPress · Drupal · Craft CMS · Google Analytics · WCAG",
+      },
+      {
+        title: "Application inventory and accessibility tracking",
+        context: "AI-assisted development",
+        description:
+          "Built a SharePoint application that brought 39 application records and their accessibility and compliance statuses into one place.",
+        implementation:
+          "Set the requirements for a SharePoint list-backed inventory and directed an AI coding assistant through the SPFx implementation. Specified which statuses staff needed to see and what the print view should include. Reviewed the generated changes against those requirements, then used WAVE and keyboard testing to assess public websites and documented findings for remediation.",
+        stack: "SPFx · React · TypeScript · WCAG · WAVE",
+      },
+    ],
   },
 ];
 
 const technicalGroups = [
   {
     label: "Automation",
-    items: "Power Automate, PowerShell, Python, PnP PowerShell, REST APIs, Forms",
+    items: "Power Automate, PowerShell, PnP PowerShell, REST APIs, Microsoft Forms, Python",
   },
   {
-    label: "Applications",
-    items: "SharePoint Online, SPFx, Microsoft 365, Entra ID, Intune, information architecture",
+    label: "Microsoft 365",
+    items: "SharePoint Online, SPFx, Microsoft Entra ID, permissions, information architecture",
   },
   {
-    label: "Development",
-    items: "TypeScript, JavaScript, React, Next.js, HTML/CSS, Git",
+    label: "Web development and CMS",
+    items: "WordPress, Drupal, Craft CMS, React, TypeScript, Next.js, HTML/CSS, Git",
   },
   {
-    label: "Operations",
-    items: "Cisco switching, Fortinet, VPN, VLANs, DNS, DHCP, endpoint support",
+    label: "AI research and development",
+    items: "OpenAI Codex, Microsoft 365 Copilot, RAG, local Python and pytest evaluation, Git, AI-assisted code review",
+  },
+  {
+    label: "Accessibility and analytics",
+    items: "WCAG 2.1/2.2, keyboard testing, WAVE, Google Analytics",
   },
 ];
 
 const experience = [
   {
-    period: "Current",
-    title: "Systems Analyst / Automation Specialist",
+    period: "Aug 2026 to present",
+    title: "Systems Analyst III / Automation Specialist",
     employer: "Texas Historical Commission",
     detail:
-      "Automation, systems integration, enterprise applications, SharePoint and Power Platform administration, governance, identity, reporting, and technical support across a distributed public-sector environment.",
+      "Build workflow automations and SharePoint applications and assess public websites for accessibility. Connect Copilot agents in SharePoint to help staff find content, manage Microsoft 365 Copilot license assignments, and train staff on SharePoint and AI tools.",
   },
   {
-    period: "Earlier agency scope",
-    title: "IT support and platform administration",
+    period: "Feb 2024 to Jul 2026",
+    title: "IT Support Specialist III",
     employer: "Texas Historical Commission",
     detail:
-      "Microsoft 365 administration, endpoint support, field-site connectivity, switching, firewalls, access management, and incident coordination.",
+      "Rebuilt the agency intranet, developed staff-facing tools, and supported Microsoft 365, guest access, endpoints, and connectivity across field sites.",
   },
   {
-    period: "2022–2024",
-    title: "IT Specialist",
+    period: "Jun 2025 to present",
+    title: "Microsoft 365 / SharePoint Consultant",
+    employer: "Independent consulting",
+    detail:
+      "Advise on SharePoint permissions, navigation, information architecture, and collaboration workflows.",
+  },
+  {
+    period: "May 2020 to Feb 2024",
+    title: "IT / Operations Support Specialist",
     employer: "Private law firm",
     detail:
-      "Technology operations, user and endpoint support, Microsoft cloud administration, documentation, troubleshooting, and a public website rebuild.",
+      "Managed the WordPress intranet, rebuilt the public website, and supported Microsoft 365, user access, endpoints, and business applications.",
   },
 ];
 
@@ -137,25 +189,34 @@ export default function Home() {
             </div>
 
             <p className="summary">
-              Builds and supports automation, integrations, enterprise applications,
-              and internal platforms in a distributed public-sector environment.
-              Current work spans Power Platform, SharePoint/SPFx, PowerShell/PnP,
-              Python, React/Next.js, identity, governance, accessibility, reporting,
-              and network and endpoint support.
+              I build Microsoft 365 workflows and internal applications for the
+              Texas Historical Commission. My work includes automating staff
+              training and certificates, rebuilding the agency’s SharePoint
+              intranet, and making accessibility findings easier to track. I use
+              AI coding assistants to implement requirements I define, review the
+              changes against those requirements, and train staff on AI tools and
+              SharePoint. My independent AI research focuses on instruction
+              following and recovery from interrupted tasks.
             </p>
+
+            <nav className="work-links" aria-label="Browse projects by specialty">
+              {workSections.map(({ id, title }) => (
+                <a href={`#${id}`} key={id}>{title}</a>
+              ))}
+            </nav>
 
             <dl className="profile-grid">
               <div>
-                <dt>Primary scope</dt>
-                <dd>Automation, applications, platform support</dd>
+                <dt>Specialties</dt>
+                <dd>Workflow automation, SharePoint, web operations</dd>
               </div>
               <div>
-                <dt>Environment</dt>
-                <dd>40+ sites · 500+ SharePoint sites · 300+ users</dd>
+                <dt>Based in</dt>
+                <dd>Austin, Texas</dd>
               </div>
               <div>
                 <dt>Core tools</dt>
-                <dd>Power Automate · PowerShell · Python · TypeScript · SPFx</dd>
+                <dd>Power Automate · SharePoint · SPFx · PowerShell</dd>
               </div>
             </dl>
           </div>
@@ -163,35 +224,38 @@ export default function Home() {
 
         <section className="section" id="work" aria-labelledby="work-heading">
           <div className="container">
-            <SectionHeader index="01" title="Selected systems work" id="work-heading" />
+            <SectionHeader index="01" title="Selected work" id="work-heading" />
 
-            <div className="project-list">
-              {projects.map((project) => (
-                <article className="project-row" key={project.title}>
-                  <div className="project-id">
-                    <span>{project.index}</span>
-                    <p>{project.context}</p>
-                  </div>
-                  <div className="project-title">
-                    <h3>{project.title}</h3>
-                    <p>{project.description}</p>
-                  </div>
-                  <div className="project-implementation">
-                    <p>{project.implementation}</p>
-                    <p className="stack">{project.stack}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
+            {workSections.map((section) => (
+              <section className="work-category" id={section.id} key={section.id} aria-labelledby={`${section.id}-heading`}>
+                <h3 id={`${section.id}-heading`}>{section.title}</h3>
+                <div className="project-list">
+                  {section.projects.map((project) => (
+                    <article className="project-row" key={project.title}>
+                      <div className="project-id">
+                        <p>{project.context}</p>
+                      </div>
+                      <div className="project-title">
+                        <h4>{project.title}</h4>
+                        <p>{project.description}</p>
+                      </div>
+                      <div className="project-implementation">
+                        <p>{project.implementation}</p>
+                        <p className="stack">{project.stack}</p>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            ))}
 
             <div className="interface-samples" aria-labelledby="samples-heading">
               <div className="samples-heading">
-                <p className="section-index">UI samples</p>
                 <div>
                   <h3 id="samples-heading">Interface samples</h3>
                   <p>
-                    UI samples based on completed work. Client names, branding,
-                    images, and identifying content are not included.
+                    Interactive demos use fictional content to show how the
+                    interfaces work.
                   </p>
                 </div>
               </div>
@@ -359,69 +423,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section
-          className="section"
-          id="networking"
-          aria-labelledby="networking-heading"
-        >
-          <div className="container">
-            <SectionHeader
-              index="05"
-              title="Networking in automation"
-              id="networking-heading"
-            />
-
-            <div className="depth-layout">
-              <div className="depth-intro">
-                <p>
-                  Works directly with Cisco switching, Fortinet firewalls, VPNs,
-                  VLANs, DHCP, DNS, site connectivity, and incident response across
-                  more than 40 locations.
-                </p>
-                <p className="scope-note">
-                  This is operational and troubleshooting work. The network team owns
-                  core architecture.
-                </p>
-              </div>
-
-              <dl className="depth-list">
-                <div>
-                  <dt>Before changes</dt>
-                  <dd>
-                    Checks whether a failure is in the application, API, identity,
-                    DNS, VPN, firewall, or site connection before changing a workflow.
-                  </dd>
-                </div>
-                <div>
-                  <dt>Access and routing</dt>
-                  <dd>
-                    Accounts for authentication, permissions, VLANs, routing, and
-                    remote-site limits when connecting systems.
-                  </dd>
-                </div>
-                <div>
-                  <dt>What to automate</dt>
-                  <dd>
-                    Inventory, validation, reporting, monitoring, and repeatable
-                    administrative changes are good candidates for automation.
-                  </dd>
-                </div>
-                <div>
-                  <dt>Support</dt>
-                  <dd>
-                    Documents network and infrastructure dependencies so failures can
-                    be traced and handed to the correct team.
-                  </dd>
-                </div>
-              </dl>
-            </div>
-          </div>
-        </section>
-
         <section className="contact" id="contact" aria-labelledby="contact-heading">
           <div className="container contact-inner">
             <div>
-              <p className="section-index">06 / Contact</p>
               <h2 id="contact-heading">Contact</h2>
             </div>
             <div className="contact-details">
@@ -448,7 +452,7 @@ export default function Home() {
       <footer className="site-footer">
         <div className="container">
           <p>Caroline McLallen</p>
-          <p>Automation · Systems integration · Enterprise applications</p>
+          <p>Automation · Microsoft 365 · Web operations</p>
         </div>
       </footer>
     </main>

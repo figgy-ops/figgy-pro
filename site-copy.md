@@ -2,89 +2,116 @@
 
 **Automation Specialist / Systems Analyst**
 
-Builds and supports automation, integrations, enterprise applications, and internal platforms in a distributed public-sector environment. Current work spans Power Platform, SharePoint/SPFx, PowerShell/PnP, Python, React/Next.js, identity, governance, accessibility, reporting, and network and endpoint support.
+I build Microsoft 365 workflows and internal applications for the Texas Historical Commission. My work includes automating staff training and certificates, rebuilding the agency’s SharePoint intranet, and making accessibility findings easier to track. I use AI coding assistants to implement requirements I define, review the changes against those requirements, and train staff on AI tools and SharePoint. My independent AI research focuses on instruction following and recovery from interrupted tasks.
 
-- **Organization:** Texas Historical Commission
-- **Primary scope:** Automation, applications, platform support
-- **Environment:** 40+ sites · 500+ SharePoint sites · 300+ users
-- **Core tools:** Power Automate · PowerShell · Python · TypeScript · SPFx
+- **Specialties** · Workflow automation, SharePoint, web operations
+- **Based in** · Austin, Texas
 
-## Selected systems work
+## Selected work
 
-### Program operations workspace
+### AI and automation
 
-**Context:** Internal web application
+#### SharePoint LMS assignment and certificate workflows
 
-Internal hub for schedules, resources, contacts, team files, and recurring submissions.
+Extended a SharePoint learning management system with Power Automate workflows that create annual training and learning-path assignments. Added eligibility checks and checked existing assignments, completion records, and verified certificates before creating new records. Logged which assignments were created, skipped, or failed for each employee. Built a separate workflow that generates a PDF certificate after verified completion and updates the employee’s training record.
 
-Built the SPFx interface in React and TypeScript; connected Microsoft Forms and Power Automate; implemented keyboard and screen-reader support.
+Used AI to trace the existing flow actions and diagnose failures from run history. When a group assignment failed, checked the SharePoint group lookup and assignment filters against the data the flow actually received. Verified annual training and learning-path assignments for individuals. Kept All Staff outside that test scope.
 
-**Stack:** SPFx · React · TypeScript · Power Automate · SharePoint
+Power Automate · SharePoint Online · Microsoft Entra ID
 
-### Enterprise intranet and governance
+#### SharePoint Copilot and knowledge retrieval
 
-**Context:** Platform administration
+Configured and deployed Copilot agents that help staff find information across SharePoint sites using retrieval-augmented generation (RAG).
 
-Rebuilt the intranet for an agency SharePoint environment with more than 500 sites.
+Connected Copilot agents to SharePoint content, managed Microsoft 365 Copilot license assignments, and trained staff on how to use the tools.
 
-Restructured navigation and information architecture; standardized ownership and permissions; built reusable provisioning and PnP PowerShell reporting.
+Microsoft 365 Copilot · SharePoint · RAG
 
-**Stack:** SharePoint Online · PnP PowerShell · Governance · WCAG
+#### AI agent reliability research
 
-### Operational automation
+Built a local Python test harness to study how AI agents follow instructions, complete tasks, and resume interrupted workflows.
 
-**Context:** Workflow automation
+Designed controlled scenarios that varied instructions and checkpoint conditions. Compared task completion and recovery behavior across scenarios and used pytest to make the checks repeatable. The test suite passed 14 automated checks.
 
-Workflows for onboarding, approvals, reporting, provisioning, access reviews, and recurring administrative work.
+Python · pytest · Git
 
-Mapped business rules and dependencies, connected source systems, built the automation, and documented monitoring and support procedures.
+### SharePoint administration
 
-**Stack:** Power Automate · PowerShell · APIs · Microsoft 365
+#### SharePoint intranet and governance
 
-### Accessible web platforms
+Rebuilt the agency intranet and organized contract documents in a repository with custom metadata and views.
 
-**Context:** Web development
+Improved navigation, disabled anonymous sharing links, and removed self-service site creation in a 500+ site SharePoint environment. Used PnP PowerShell for repeatable administration and wrote procedures for site owners.
 
-Responsive public and internal websites with maintainable content structure and accessible interactions.
+SharePoint Online · PnP PowerShell · Microsoft 365
 
-Developed React and Next.js interfaces, including a production site for a private law firm, with WCAG requirements built into the implementation.
+#### Intern onboarding workspace
 
-**Stack:** Next.js · React · TypeScript · WCAG
+Built a SharePoint hub for interns to find schedules, onboarding resources, division links, and staff contacts.
+
+Built the interface in SPFx and connected a weekly Microsoft Forms timesheet to a SharePoint list through Power Automate.
+
+SPFx · React · TypeScript · Microsoft Forms · Power Automate
+
+### Web operations and accessibility
+
+#### Web publishing and CMS operations
+
+Managed a law firm’s WordPress intranet and supported public-sector publishing across SharePoint, Teams, and the agency website.
+
+Used Google Analytics to identify hard-to-find, high-demand content and improve navigation, worked with Drupal developers on Outlook-managed calendar embeds, and revised vendor requirements for accessibility and security across WordPress, Drupal, Craft CMS, and custom PHP sites.
+
+WordPress · Drupal · Craft CMS · Google Analytics · WCAG
+
+#### Application inventory and accessibility tracking
+
+Built a SharePoint application that brought 39 application records and their accessibility and compliance statuses into one place.
+
+Set the requirements for a SharePoint list-backed inventory and directed an AI coding assistant through the SPFx implementation. Specified which statuses staff needed to see and what the print view should include. Reviewed the generated changes against those requirements, then used WAVE and keyboard testing to assess public websites and documented findings for remediation.
+
+SPFx · React · TypeScript · WCAG · WAVE
 
 ### Interface samples
 
-UI samples based on completed work. Client names, branding, images, and identifying content are not included.
+Interactive demos use fictional content to show how the interfaces work.
 
-- **Program workspace:** SPFx · React · TypeScript · Power Automate · WCAG 2.2
-- **Legal services interface:** Next.js · React · WCAG 2.1
-- **Product catalog:** React · Data imports · Accessible UI
+- Program workspace
+- Legal services interface
+- Product catalog
 
 ## Experience
 
-### Systems Analyst / Automation Specialist
+### Systems Analyst III / Automation Specialist
 
-**Texas Historical Commission · Current**
+**Texas Historical Commission · Aug 2026 to present**
 
-Automation, systems integration, enterprise applications, SharePoint and Power Platform administration, governance, identity, reporting, and technical support across a distributed public-sector environment.
+Build workflow automations and SharePoint applications and assess public websites for accessibility. Connect Copilot agents in SharePoint to help staff find content, manage Microsoft 365 Copilot license assignments, and train staff on SharePoint and AI tools.
 
-### IT support and platform administration
+### IT Support Specialist III
 
-**Texas Historical Commission · Earlier agency scope**
+**Texas Historical Commission · Feb 2024 to Jul 2026**
 
-Microsoft 365 administration, endpoint support, field-site connectivity, switching, firewalls, access management, and incident coordination.
+Rebuilt the agency intranet, developed staff-facing tools, and supported Microsoft 365, guest access, endpoints, and connectivity across field sites.
 
-### IT Specialist
+### Microsoft 365 / SharePoint Consultant
 
-**Private law firm · 2022–2024**
+**Independent consulting · Jun 2025 to present**
 
-Technology operations, user and endpoint support, Microsoft cloud administration, documentation, troubleshooting, and a public website rebuild.
+Advise on SharePoint permissions, navigation, information architecture, and collaboration workflows.
+
+### IT / Operations Support Specialist
+
+**Private law firm · May 2020 to Feb 2024**
+
+Managed the WordPress intranet, rebuilt the public website, and supported Microsoft 365, user access, endpoints, and business applications.
 
 ## Technical profile
 
-- **Automation:** Power Automate, PowerShell, Python, PnP PowerShell, REST APIs, Forms
-- **Applications:** SharePoint Online, SPFx, Microsoft 365, Entra ID, Intune, information architecture
-- **Development:** TypeScript, JavaScript, React, Next.js, HTML/CSS, Git
-- **Operations:** Cisco switching, Fortinet, VPN, VLANs, DNS, DHCP, endpoint support
+- **Automation** · Power Automate, PowerShell, PnP PowerShell, REST APIs, Microsoft Forms, Python
+- **Microsoft 365** · SharePoint Online, SPFx, Microsoft Entra ID, permissions, information architecture
+- **Web development and CMS** · WordPress, Drupal, Craft CMS, React, TypeScript, Next.js, HTML/CSS, Git
+- **AI research and development** · OpenAI Codex, Microsoft 365 Copilot, RAG, local Python and pytest evaluation, Git, AI-assisted code review
+- **Accessibility and analytics** · WCAG 2.1/2.2, keyboard testing, WAVE, Google Analytics
 
 ### Credentials
 
@@ -99,17 +126,6 @@ Builds WCAG 2.1/2.2 and Section 508 requirements into internal applications, Sha
 - **Interaction:** Keyboard operation, visible focus, logical tab order, modal focus management, and clear form labels and errors.
 - **Verification:** Screen-reader checks, contrast review, zoom and responsive reflow, and testing against defined acceptance criteria.
 - **Applied work:** SPFx components, internal program tools, intranet navigation, and responsive public websites.
-
-## Networking in automation
-
-Works directly with Cisco switching, Fortinet firewalls, VPNs, VLANs, DHCP, DNS, site connectivity, and incident response across more than 40 locations.
-
-This is operational and troubleshooting work. The network team owns core architecture.
-
-- **Before changes:** Checks whether a failure is in the application, API, identity, DNS, VPN, firewall, or site connection before changing a workflow.
-- **Access and routing:** Accounts for authentication, permissions, VLANs, routing, and remote-site limits when connecting systems.
-- **What to automate:** Inventory, validation, reporting, monitoring, and repeatable administrative changes are good candidates for automation.
-- **Support:** Documents network and infrastructure dependencies so failures can be traced and handed to the correct team.
 
 ## Contact
 
