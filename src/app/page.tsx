@@ -169,7 +169,8 @@ export default function Home() {
                 <p className="role">Automation Specialist / Systems Analyst</p>
                 <h1 id="intro-heading">Caroline McLallen</h1>
               </div>
-              <div className="contact-strip" aria-label="Profile links">
+              <div className="contact-strip" aria-label="Location and profile links">
+                <span className="location">Austin, Texas</span>
                 <a href="mailto:caroline360@gmail.com">Email</a>
                 <a
                   href="https://github.com/figgy-ops"
@@ -205,26 +206,12 @@ export default function Home() {
               ))}
             </nav>
 
-            <dl className="profile-grid">
-              <div>
-                <dt>Specialties</dt>
-                <dd>Workflow automation, SharePoint, web operations</dd>
-              </div>
-              <div>
-                <dt>Based in</dt>
-                <dd>Austin, Texas</dd>
-              </div>
-              <div>
-                <dt>Core tools</dt>
-                <dd>Power Automate · SharePoint · SPFx · PowerShell</dd>
-              </div>
-            </dl>
           </div>
         </section>
 
         <section className="section" id="work" aria-labelledby="work-heading">
           <div className="container">
-            <SectionHeader index="01" title="Selected work" id="work-heading" />
+            <SectionHeader title="Selected work" id="work-heading" />
 
             {workSections.map((section) => (
               <section className="work-category" id={section.id} key={section.id} aria-labelledby={`${section.id}-heading`}>
@@ -232,10 +219,8 @@ export default function Home() {
                 <div className="project-list">
                   {section.projects.map((project) => (
                     <article className="project-row" key={project.title}>
-                      <div className="project-id">
-                        <p>{project.context}</p>
-                      </div>
                       <div className="project-title">
+                        <p className="project-context">{project.context}</p>
                         <h4>{project.title}</h4>
                         <p>{project.description}</p>
                       </div>
@@ -327,7 +312,7 @@ export default function Home() {
 
         <section className="section section-muted" id="experience" aria-labelledby="experience-heading">
           <div className="container">
-            <SectionHeader index="02" title="Experience" id="experience-heading" />
+            <SectionHeader title="Experience" id="experience-heading" />
 
             <div className="experience-list">
               {experience.map((item) => (
@@ -346,7 +331,7 @@ export default function Home() {
 
         <section className="section" id="skills" aria-labelledby="skills-heading">
           <div className="container">
-            <SectionHeader index="03" title="Technical profile" id="skills-heading" />
+            <SectionHeader title="Technical profile" id="skills-heading" />
 
             <dl className="technical-grid">
               {technicalGroups.map((group) => (
@@ -378,7 +363,6 @@ export default function Home() {
         >
           <div className="container">
             <SectionHeader
-              index="04"
               title="Accessibility implementation"
               id="accessibility-heading"
             />
@@ -460,17 +444,14 @@ export default function Home() {
 }
 
 function SectionHeader({
-  index,
   title,
   id,
 }: {
-  index: string;
   title: string;
   id: string;
 }) {
   return (
     <div className="section-header">
-      <p className="section-index">{index}</p>
       <h2 id={id}>{title}</h2>
     </div>
   );
